@@ -1,0 +1,1112 @@
+(torch_1.9_torchvision_10.0) -bash-4.2$ CUDA_VISIBLE_DEVICES="1" python AVS_train_M3_celeba_v7_extE.py 
+Model M1:
+ Loaded from: ./results/celeba/train_M1/vgg8_narrow_k2/pretrained_False_normalization_None_loss_correct_imbalance_False/model.pth
+ customizable_VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (9): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (10): ReLU(inplace=True)
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): AdaptiveAvgPool2d(output_size=(2, 2))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=512, out_features=256, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=256, out_features=40, bias=True)
+  )
+)
+Model M3:
+
+Initialized M3 layer (features.0.weight) from M1 layer (features.0.weight)
+Initialized M3 layer (features.0.bias) from M1 layer (features.0.bias)
+Initialized M3 layer (features.3.weight) from M1 layer (features.3.weight)
+Initialized M3 layer (features.3.bias) from M1 layer (features.3.bias)
+Initialized M3 layer (features.6.weight) from M1 layer (features.6.weight)
+Initialized M3 layer (features.6.bias) from M1 layer (features.6.bias)
+Initialized M3 layer (features.9.weight) from M1 layer (features.9.weight)
+Initialized M3 layer (features.9.bias) from M1 layer (features.9.bias)
+Initialized M3 layer (features.12.weight) from M1 layer (features.12.weight)
+Initialized M3 layer (features.12.bias) from M1 layer (features.12.bias)
+Initialized M3 layer (classifier.0.weight) from M1 layer (classifier.0.weight)
+Initialized M3 layer (classifier.0.bias) from M1 layer (classifier.0.bias)
+Initialized M3 layer (classifier.3.weight) from M1 layer (classifier.3.weight)
+Initialized M3 layer (classifier.3.bias) from M1 layer (classifier.3.bias)
+Initialized M3 layer (classifier.6.weight) from M1 layer (classifier.6.weight)
+Initialized M3 layer (classifier.6.bias) from M1 layer (classifier.6.bias)
+customizable_VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (9): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (10): ReLU(inplace=True)
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): AdaptiveAvgPool2d(output_size=(2, 2))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=512, out_features=256, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=256, out_features=40, bias=True)
+  )
+  (RLfeat): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (9): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (10): ReLU(inplace=True)
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): AdaptiveAvgPool2d(output_size=(2, 2))
+  )
+  (fovea_control): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ReLU(inplace=True)
+    (4): Linear(in_features=256, out_features=5, bias=True)
+  )
+  (fovea_control_baseline): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ReLU(inplace=True)
+    (4): Linear(in_features=256, out_features=1, bias=True)
+  )
+)
+Epoch: 1/100
+
+/home/min/a/tibrayev/miniconda3/envs/torch_1.9_torchvision_10.0/lib/python3.8/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+Train Loss: 0.495 | 0.000 | 0.495, Acc: 86.4205 [5626663/6510800]
+
+IoU@0.5: Average: 0.353 | TPR: 0.2305 [37511/162770]
+
+Validation Loss: 0.786 | 0.000 | 0.786, Acc: 87.9456 [698886/794680]
+
+IoU@0.5: Average: 0.431 | TPR: 0.3807 [7563/19867]
+
+Epoch: 2/100
+
+Train Loss: 0.681 | 0.000 | 0.681, Acc: 87.0699 [5668950/6510800]
+
+IoU@0.5: Average: 0.442 | TPR: 0.4435 [72184/162770]
+
+Validation Loss: 0.702 | 0.000 | 0.702, Acc: 88.2457 [701271/794680]
+
+IoU@0.5: Average: 0.512 | TPR: 0.5999 [11919/19867]
+
+Epoch: 3/100
+
+Train Loss: 0.717 | 0.000 | 0.717, Acc: 87.2488 [5680593/6510800]
+
+IoU@0.5: Average: 0.493 | TPR: 0.5692 [92643/162770]
+
+Validation Loss: 0.681 | 0.000 | 0.681, Acc: 88.0333 [699583/794680]
+
+IoU@0.5: Average: 0.541 | TPR: 0.6455 [12824/19867]
+
+Epoch: 4/100
+
+Train Loss: 0.726 | 0.000 | 0.726, Acc: 87.2478 [5680533/6510800]
+
+IoU@0.5: Average: 0.509 | TPR: 0.6007 [97781/162770]
+
+Validation Loss: 0.911 | 0.000 | 0.911, Acc: 88.1903 [700831/794680]
+
+IoU@0.5: Average: 0.530 | TPR: 0.6543 [12999/19867]
+
+Epoch: 5/100
+
+Train Loss: 0.720 | 0.000 | 0.720, Acc: 87.2824 [5682780/6510800]
+
+IoU@0.5: Average: 0.509 | TPR: 0.5999 [97639/162770]
+
+Validation Loss: 0.619 | 0.000 | 0.619, Acc: 88.2207 [701072/794680]
+
+IoU@0.5: Average: 0.499 | TPR: 0.5633 [11191/19867]
+
+Epoch: 6/100
+
+Train Loss: 0.751 | 0.000 | 0.751, Acc: 87.3005 [5683958/6510800]
+
+IoU@0.5: Average: 0.520 | TPR: 0.6222 [101274/162770]
+
+Validation Loss: 0.502 | 0.000 | 0.502, Acc: 88.0083 [699384/794680]
+
+IoU@0.5: Average: 0.476 | TPR: 0.5062 [10057/19867]
+
+Epoch: 7/100
+
+Train Loss: 0.714 | 0.000 | 0.714, Acc: 87.3513 [5687267/6510800]
+
+IoU@0.5: Average: 0.518 | TPR: 0.6141 [99953/162770]
+
+Validation Loss: 0.665 | 0.000 | 0.665, Acc: 88.1907 [700834/794680]
+
+IoU@0.5: Average: 0.526 | TPR: 0.6102 [12123/19867]
+
+Epoch: 8/100
+
+Train Loss: 0.726 | 0.000 | 0.726, Acc: 87.3447 [5686841/6510800]
+
+IoU@0.5: Average: 0.521 | TPR: 0.6209 [101056/162770]
+
+Validation Loss: 0.912 | 0.000 | 0.912, Acc: 87.9894 [699234/794680]
+
+IoU@0.5: Average: 0.577 | TPR: 0.7156 [14217/19867]
+
+Epoch: 9/100
+
+Train Loss: 0.759 | 0.000 | 0.759, Acc: 87.3538 [5687432/6510800]
+
+IoU@0.5: Average: 0.530 | TPR: 0.6438 [104784/162770]
+
+Validation Loss: 0.702 | 0.000 | 0.702, Acc: 88.2528 [701327/794680]
+
+IoU@0.5: Average: 0.518 | TPR: 0.6212 [12342/19867]
+
+Epoch: 10/100
+
+Train Loss: 0.745 | 0.000 | 0.745, Acc: 87.3859 [5689520/6510800]
+
+IoU@0.5: Average: 0.523 | TPR: 0.6311 [102721/162770]
+
+Validation Loss: 0.854 | 0.000 | 0.854, Acc: 88.1956 [700873/794680]
+
+IoU@0.5: Average: 0.543 | TPR: 0.6726 [13362/19867]
+
+Epoch: 11/100
+
+Train Loss: 0.758 | 0.000 | 0.758, Acc: 87.3821 [5689272/6510800]
+
+IoU@0.5: Average: 0.518 | TPR: 0.6300 [102537/162770]
+
+Validation Loss: 1.098 | 0.000 | 1.098, Acc: 88.1531 [700535/794680]
+
+IoU@0.5: Average: 0.566 | TPR: 0.7256 [14415/19867]
+
+Epoch: 12/100
+
+Train Loss: 0.762 | 0.000 | 0.762, Acc: 87.4176 [5691582/6510800]
+
+IoU@0.5: Average: 0.524 | TPR: 0.6393 [104056/162770]
+
+Validation Loss: 0.830 | 0.000 | 0.830, Acc: 88.2344 [701181/794680]
+
+IoU@0.5: Average: 0.569 | TPR: 0.7109 [14124/19867]
+
+Epoch: 13/100
+
+Train Loss: 0.748 | 0.000 | 0.748, Acc: 87.3913 [5689872/6510800]
+
+IoU@0.5: Average: 0.531 | TPR: 0.6426 [104604/162770]
+
+Validation Loss: 0.929 | 0.000 | 0.929, Acc: 88.2660 [701432/794680]
+
+IoU@0.5: Average: 0.559 | TPR: 0.7144 [14193/19867]
+
+Epoch: 14/100
+
+Train Loss: 0.776 | 0.000 | 0.776, Acc: 87.3860 [5689529/6510800]
+
+IoU@0.5: Average: 0.534 | TPR: 0.6572 [106977/162770]
+
+Validation Loss: 0.860 | 0.000 | 0.860, Acc: 88.1697 [700667/794680]
+
+IoU@0.5: Average: 0.579 | TPR: 0.7127 [14159/19867]
+
+Epoch: 15/100
+
+Train Loss: 0.756 | 0.000 | 0.756, Acc: 87.3482 [5687065/6510800]
+
+IoU@0.5: Average: 0.533 | TPR: 0.6467 [105259/162770]
+
+Validation Loss: 0.787 | 0.000 | 0.787, Acc: 88.2770 [701520/794680]
+
+IoU@0.5: Average: 0.567 | TPR: 0.6913 [13735/19867]
+
+Epoch: 16/100
+
+Train Loss: 0.751 | 0.000 | 0.751, Acc: 87.4151 [5691424/6510800]
+
+IoU@0.5: Average: 0.523 | TPR: 0.6336 [103130/162770]
+
+Validation Loss: 0.858 | 0.000 | 0.858, Acc: 88.1496 [700507/794680]
+
+IoU@0.5: Average: 0.578 | TPR: 0.7164 [14232/19867]
+
+Epoch: 17/100
+
+Train Loss: 0.744 | 0.000 | 0.744, Acc: 87.3439 [5686786/6510800]
+
+IoU@0.5: Average: 0.529 | TPR: 0.6437 [104770/162770]
+
+Validation Loss: 0.891 | 0.000 | 0.891, Acc: 88.3904 [702421/794680]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6855 [13619/19867]
+
+Epoch: 18/100
+
+Train Loss: 0.765 | 0.000 | 0.765, Acc: 87.4328 [5692574/6510800]
+
+IoU@0.5: Average: 0.533 | TPR: 0.6498 [105761/162770]
+
+Validation Loss: 0.717 | 0.000 | 0.717, Acc: 88.3285 [701929/794680]
+
+IoU@0.5: Average: 0.522 | TPR: 0.6186 [12289/19867]
+
+Epoch: 19/100
+
+Train Loss: 0.733 | 0.000 | 0.733, Acc: 87.4222 [5691885/6510800]
+
+IoU@0.5: Average: 0.525 | TPR: 0.6367 [103639/162770]
+
+Validation Loss: 0.938 | 0.000 | 0.938, Acc: 88.2533 [701331/794680]
+
+IoU@0.5: Average: 0.567 | TPR: 0.7215 [14334/19867]
+
+Epoch: 20/100
+
+Train Loss: 0.767 | 0.000 | 0.767, Acc: 87.4236 [5691973/6510800]
+
+IoU@0.5: Average: 0.532 | TPR: 0.6539 [106433/162770]
+
+Validation Loss: 1.009 | 0.000 | 1.009, Acc: 88.2580 [701369/794680]
+
+IoU@0.5: Average: 0.569 | TPR: 0.7446 [14792/19867]
+
+Epoch: 21/100
+
+Train Loss: 0.790 | 0.000 | 0.790, Acc: 87.4208 [5691796/6510800]
+
+IoU@0.5: Average: 0.535 | TPR: 0.6584 [107172/162770]
+
+Validation Loss: 0.805 | 0.000 | 0.805, Acc: 88.3738 [702289/794680]
+
+IoU@0.5: Average: 0.555 | TPR: 0.6923 [13754/19867]
+
+Epoch: 22/100
+
+Train Loss: 0.756 | 0.000 | 0.756, Acc: 87.4149 [5691408/6510800]
+
+IoU@0.5: Average: 0.541 | TPR: 0.6638 [108049/162770]
+
+Validation Loss: 0.753 | 0.000 | 0.753, Acc: 88.3650 [702219/794680]
+
+IoU@0.5: Average: 0.533 | TPR: 0.6583 [13079/19867]
+
+Epoch: 23/100
+
+Train Loss: 0.731 | 0.000 | 0.731, Acc: 87.4173 [5691563/6510800]
+
+IoU@0.5: Average: 0.527 | TPR: 0.6436 [104765/162770]
+
+Validation Loss: 0.815 | 0.000 | 0.815, Acc: 88.2285 [701134/794680]
+
+IoU@0.5: Average: 0.580 | TPR: 0.7020 [13947/19867]
+
+Epoch: 24/100
+
+Train Loss: 0.757 | 0.000 | 0.757, Acc: 87.3594 [5687799/6510800]
+
+IoU@0.5: Average: 0.542 | TPR: 0.6620 [107759/162770]
+
+Validation Loss: 0.948 | 0.000 | 0.948, Acc: 88.2179 [701050/794680]
+
+IoU@0.5: Average: 0.590 | TPR: 0.7368 [14638/19867]
+
+Epoch: 25/100
+
+Train Loss: 0.773 | 0.000 | 0.773, Acc: 87.4001 [5690446/6510800]
+
+IoU@0.5: Average: 0.541 | TPR: 0.6672 [108597/162770]
+
+Validation Loss: 0.695 | 0.000 | 0.695, Acc: 88.2827 [701565/794680]
+
+IoU@0.5: Average: 0.525 | TPR: 0.6325 [12566/19867]
+
+Epoch: 26/100
+
+Train Loss: 0.720 | 0.000 | 0.720, Acc: 87.4189 [5691672/6510800]
+
+IoU@0.5: Average: 0.541 | TPR: 0.6578 [107077/162770]
+
+Validation Loss: 1.036 | 0.000 | 1.036, Acc: 88.2585 [701373/794680]
+
+IoU@0.5: Average: 0.584 | TPR: 0.7431 [14763/19867]
+
+Epoch: 27/100
+
+Train Loss: 0.766 | 0.000 | 0.766, Acc: 87.4163 [5691499/6510800]
+
+IoU@0.5: Average: 0.537 | TPR: 0.6530 [106290/162770]
+
+Validation Loss: 1.094 | 0.000 | 1.094, Acc: 88.1362 [700401/794680]
+
+IoU@0.5: Average: 0.568 | TPR: 0.7213 [14330/19867]
+
+Epoch: 28/100
+
+Train Loss: 0.782 | 0.000 | 0.782, Acc: 87.3617 [5687946/6510800]
+
+IoU@0.5: Average: 0.545 | TPR: 0.6682 [108769/162770]
+
+Validation Loss: 0.869 | 0.000 | 0.869, Acc: 88.0187 [699467/794680]
+
+IoU@0.5: Average: 0.575 | TPR: 0.7134 [14173/19867]
+
+Epoch: 29/100
+
+Train Loss: 0.747 | 0.000 | 0.747, Acc: 87.4393 [5693000/6510800]
+
+IoU@0.5: Average: 0.529 | TPR: 0.6441 [104839/162770]
+
+Validation Loss: 1.023 | 0.000 | 1.023, Acc: 88.2959 [701670/794680]
+
+IoU@0.5: Average: 0.582 | TPR: 0.7454 [14809/19867]
+
+Epoch: 30/100
+
+Train Loss: 0.717 | 0.000 | 0.717, Acc: 87.4278 [5692247/6510800]
+
+IoU@0.5: Average: 0.538 | TPR: 0.6471 [105330/162770]
+
+Validation Loss: 0.823 | 0.000 | 0.823, Acc: 88.3407 [702026/794680]
+
+IoU@0.5: Average: 0.559 | TPR: 0.6851 [13610/19867]
+
+Epoch: 31/100
+
+Train Loss: 0.744 | 0.000 | 0.744, Acc: 87.4486 [5693604/6510800]
+
+IoU@0.5: Average: 0.534 | TPR: 0.6476 [105403/162770]
+
+Validation Loss: 0.813 | 0.000 | 0.813, Acc: 88.3743 [702293/794680]
+
+IoU@0.5: Average: 0.550 | TPR: 0.6855 [13618/19867]
+
+Epoch: 32/100
+
+Train Loss: 0.742 | 0.000 | 0.742, Acc: 87.4146 [5691389/6510800]
+
+IoU@0.5: Average: 0.538 | TPR: 0.6512 [105994/162770]
+
+Validation Loss: 1.042 | 0.000 | 1.042, Acc: 88.2788 [701534/794680]
+
+IoU@0.5: Average: 0.577 | TPR: 0.7403 [14707/19867]
+
+Epoch: 33/100
+
+Train Loss: 0.743 | 0.000 | 0.743, Acc: 87.4378 [5692901/6510800]
+
+IoU@0.5: Average: 0.525 | TPR: 0.6368 [103645/162770]
+
+Validation Loss: 0.730 | 0.000 | 0.730, Acc: 88.1681 [700654/794680]
+
+IoU@0.5: Average: 0.556 | TPR: 0.6622 [13156/19867]
+
+Epoch: 34/100
+
+Train Loss: 0.772 | 0.000 | 0.772, Acc: 87.4256 [5692105/6510800]
+
+IoU@0.5: Average: 0.526 | TPR: 0.6472 [105347/162770]
+
+Validation Loss: 0.901 | 0.000 | 0.901, Acc: 88.2911 [701632/794680]
+
+IoU@0.5: Average: 0.544 | TPR: 0.6908 [13724/19867]
+
+Epoch: 35/100
+
+Train Loss: 0.759 | 0.000 | 0.759, Acc: 87.4356 [5692755/6510800]
+
+IoU@0.5: Average: 0.529 | TPR: 0.6496 [105743/162770]
+
+Validation Loss: 0.708 | 0.000 | 0.708, Acc: 88.3592 [702173/794680]
+
+IoU@0.5: Average: 0.531 | TPR: 0.6402 [12719/19867]
+
+Epoch: 36/100
+
+Train Loss: 0.743 | 0.000 | 0.743, Acc: 87.4707 [5695043/6510800]
+
+IoU@0.5: Average: 0.528 | TPR: 0.6491 [105655/162770]
+
+Validation Loss: 0.688 | 0.000 | 0.688, Acc: 88.2660 [701432/794680]
+
+IoU@0.5: Average: 0.508 | TPR: 0.5875 [11671/19867]
+
+Epoch: 37/100
+
+Train Loss: 0.764 | 0.000 | 0.764, Acc: 87.4381 [5692922/6510800]
+
+IoU@0.5: Average: 0.534 | TPR: 0.6567 [106893/162770]
+
+Validation Loss: 1.001 | 0.000 | 1.001, Acc: 88.2894 [701618/794680]
+
+IoU@0.5: Average: 0.570 | TPR: 0.7464 [14828/19867]
+
+Epoch: 38/100
+
+Train Loss: 0.746 | 0.000 | 0.746, Acc: 87.4667 [5694781/6510800]
+
+IoU@0.5: Average: 0.536 | TPR: 0.6593 [107310/162770]
+
+Validation Loss: 0.819 | 0.000 | 0.819, Acc: 88.1371 [700408/794680]
+
+IoU@0.5: Average: 0.587 | TPR: 0.7211 [14326/19867]
+
+Epoch: 39/100
+
+Train Loss: 0.738 | 0.000 | 0.738, Acc: 87.4448 [5693355/6510800]
+
+IoU@0.5: Average: 0.526 | TPR: 0.6408 [104303/162770]
+
+Validation Loss: 0.822 | 0.000 | 0.822, Acc: 88.3727 [702280/794680]
+
+IoU@0.5: Average: 0.555 | TPR: 0.6963 [13834/19867]
+
+Epoch: 40/100
+
+Train Loss: 0.749 | 0.000 | 0.749, Acc: 87.3930 [5689984/6510800]
+
+IoU@0.5: Average: 0.539 | TPR: 0.6591 [107286/162770]
+
+Validation Loss: 0.840 | 0.000 | 0.840, Acc: 88.2549 [701344/794680]
+
+IoU@0.5: Average: 0.588 | TPR: 0.7144 [14193/19867]
+
+Epoch: 41/100
+
+Train Loss: 0.750 | 0.000 | 0.750, Acc: 87.4467 [5693480/6510800]
+
+IoU@0.5: Average: 0.533 | TPR: 0.6544 [106515/162770]
+
+Validation Loss: 0.808 | 0.000 | 0.808, Acc: 88.3421 [702037/794680]
+
+IoU@0.5: Average: 0.565 | TPR: 0.6991 [13889/19867]
+
+Epoch: 42/100
+
+Train Loss: 0.769 | 0.000 | 0.769, Acc: 87.4364 [5692812/6510800]
+
+IoU@0.5: Average: 0.521 | TPR: 0.6274 [102116/162770]
+
+Validation Loss: 0.910 | 0.000 | 0.910, Acc: 88.3168 [701836/794680]
+
+IoU@0.5: Average: 0.581 | TPR: 0.7302 [14507/19867]
+
+Epoch: 43/100
+
+Train Loss: 0.741 | 0.000 | 0.741, Acc: 87.4571 [5694154/6510800]
+
+IoU@0.5: Average: 0.536 | TPR: 0.6521 [106142/162770]
+
+Validation Loss: 0.958 | 0.000 | 0.958, Acc: 88.2109 [700994/794680]
+
+IoU@0.5: Average: 0.589 | TPR: 0.7434 [14770/19867]
+
+Epoch: 44/100
+
+Train Loss: 0.748 | 0.000 | 0.748, Acc: 87.4728 [5695177/6510800]
+
+IoU@0.5: Average: 0.538 | TPR: 0.6562 [106809/162770]
+
+Validation Loss: 0.815 | 0.000 | 0.815, Acc: 88.3457 [702066/794680]
+
+IoU@0.5: Average: 0.545 | TPR: 0.6748 [13407/19867]
+
+Epoch: 45/100
+
+Train Loss: 0.767 | 0.000 | 0.767, Acc: 87.4846 [5695945/6510800]
+
+IoU@0.5: Average: 0.534 | TPR: 0.6555 [106699/162770]
+
+Validation Loss: 0.845 | 0.000 | 0.845, Acc: 88.3666 [702232/794680]
+
+IoU@0.5: Average: 0.549 | TPR: 0.6872 [13652/19867]
+
+Epoch: 46/100
+
+Train Loss: 0.766 | 0.000 | 0.766, Acc: 87.4900 [5696296/6510800]
+
+IoU@0.5: Average: 0.538 | TPR: 0.6605 [107511/162770]
+
+Validation Loss: 0.890 | 0.000 | 0.890, Acc: 88.3747 [702296/794680]
+
+IoU@0.5: Average: 0.577 | TPR: 0.7349 [14600/19867]
+
+Epoch: 47/100
+
+Train Loss: 0.777 | 0.000 | 0.777, Acc: 87.4774 [5695481/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6712 [109252/162770]
+
+Validation Loss: 0.808 | 0.000 | 0.808, Acc: 88.4229 [702679/794680]
+
+IoU@0.5: Average: 0.571 | TPR: 0.7065 [14036/19867]
+
+Epoch: 48/100
+
+Train Loss: 0.754 | 0.000 | 0.754, Acc: 87.4814 [5695737/6510800]
+
+IoU@0.5: Average: 0.536 | TPR: 0.6557 [106734/162770]
+
+Validation Loss: 0.861 | 0.000 | 0.861, Acc: 88.3259 [701908/794680]
+
+IoU@0.5: Average: 0.582 | TPR: 0.7166 [14236/19867]
+
+Epoch: 49/100
+
+Train Loss: 0.791 | 0.000 | 0.791, Acc: 87.4874 [5696131/6510800]
+
+IoU@0.5: Average: 0.551 | TPR: 0.6849 [111488/162770]
+
+Validation Loss: 0.842 | 0.000 | 0.842, Acc: 88.3310 [701949/794680]
+
+IoU@0.5: Average: 0.587 | TPR: 0.7394 [14689/19867]
+
+Epoch: 50/100
+
+Train Loss: 0.763 | 0.000 | 0.763, Acc: 87.4619 [5694467/6510800]
+
+IoU@0.5: Average: 0.542 | TPR: 0.6689 [108883/162770]
+
+Validation Loss: 0.799 | 0.000 | 0.799, Acc: 88.1458 [700477/794680]
+
+IoU@0.5: Average: 0.560 | TPR: 0.6790 [13490/19867]
+
+Epoch: 51/100
+
+Train Loss: 0.771 | 0.000 | 0.771, Acc: 87.4992 [5696900/6510800]
+
+IoU@0.5: Average: 0.557 | TPR: 0.6892 [112174/162770]
+
+Validation Loss: 0.828 | 0.000 | 0.828, Acc: 88.3284 [701928/794680]
+
+IoU@0.5: Average: 0.580 | TPR: 0.7097 [14099/19867]
+
+Epoch: 52/100
+
+Train Loss: 0.784 | 0.000 | 0.784, Acc: 87.5273 [5698728/6510800]
+
+IoU@0.5: Average: 0.564 | TPR: 0.6990 [113778/162770]
+
+Validation Loss: 0.959 | 0.000 | 0.959, Acc: 88.3435 [702048/794680]
+
+IoU@0.5: Average: 0.592 | TPR: 0.7474 [14848/19867]
+
+Epoch: 53/100
+
+Train Loss: 0.782 | 0.000 | 0.782, Acc: 87.5518 [5700325/6510800]
+
+IoU@0.5: Average: 0.563 | TPR: 0.6970 [113456/162770]
+
+Validation Loss: 0.900 | 0.000 | 0.900, Acc: 88.3727 [702280/794680]
+
+IoU@0.5: Average: 0.583 | TPR: 0.7309 [14520/19867]
+
+Epoch: 54/100
+
+Train Loss: 0.777 | 0.000 | 0.777, Acc: 87.5620 [5700985/6510800]
+
+IoU@0.5: Average: 0.560 | TPR: 0.6919 [112626/162770]
+
+Validation Loss: 0.922 | 0.000 | 0.922, Acc: 88.3637 [702209/794680]
+
+IoU@0.5: Average: 0.587 | TPR: 0.7387 [14675/19867]
+
+Epoch: 55/100
+
+Train Loss: 0.780 | 0.000 | 0.780, Acc: 87.5765 [5701934/6510800]
+
+IoU@0.5: Average: 0.558 | TPR: 0.6916 [112567/162770]
+
+Validation Loss: 0.874 | 0.000 | 0.874, Acc: 88.3958 [702464/794680]
+
+IoU@0.5: Average: 0.572 | TPR: 0.7188 [14280/19867]
+
+Epoch: 56/100
+
+Train Loss: 0.751 | 0.000 | 0.751, Acc: 87.5692 [5701455/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6766 [110131/162770]
+
+Validation Loss: 0.936 | 0.000 | 0.936, Acc: 88.3815 [702350/794680]
+
+IoU@0.5: Average: 0.578 | TPR: 0.7356 [14614/19867]
+
+Epoch: 57/100
+
+Train Loss: 0.751 | 0.000 | 0.751, Acc: 87.5923 [5702961/6510800]
+
+IoU@0.5: Average: 0.544 | TPR: 0.6756 [109961/162770]
+
+Validation Loss: 0.842 | 0.000 | 0.842, Acc: 88.3997 [702495/794680]
+
+IoU@0.5: Average: 0.557 | TPR: 0.6917 [13742/19867]
+
+Epoch: 58/100
+
+Train Loss: 0.748 | 0.000 | 0.748, Acc: 87.6061 [5703856/6510800]
+
+IoU@0.5: Average: 0.545 | TPR: 0.6727 [109495/162770]
+
+Validation Loss: 0.892 | 0.000 | 0.892, Acc: 88.3785 [702326/794680]
+
+IoU@0.5: Average: 0.570 | TPR: 0.7192 [14288/19867]
+
+Epoch: 59/100
+
+Train Loss: 0.782 | 0.000 | 0.782, Acc: 87.5796 [5702134/6510800]
+
+IoU@0.5: Average: 0.555 | TPR: 0.6897 [112258/162770]
+
+Validation Loss: 0.843 | 0.000 | 0.843, Acc: 88.3956 [702462/794680]
+
+IoU@0.5: Average: 0.570 | TPR: 0.7055 [14017/19867]
+
+Epoch: 60/100
+
+Train Loss: 0.793 | 0.000 | 0.793, Acc: 87.5911 [5702879/6510800]
+
+IoU@0.5: Average: 0.550 | TPR: 0.6880 [111979/162770]
+
+Validation Loss: 0.856 | 0.000 | 0.856, Acc: 88.3687 [702248/794680]
+
+IoU@0.5: Average: 0.571 | TPR: 0.7084 [14074/19867]
+
+Epoch: 61/100
+
+Train Loss: 0.753 | 0.000 | 0.753, Acc: 87.5842 [5702434/6510800]
+
+IoU@0.5: Average: 0.554 | TPR: 0.6799 [110670/162770]
+
+Validation Loss: 0.920 | 0.000 | 0.920, Acc: 88.3681 [702244/794680]
+
+IoU@0.5: Average: 0.575 | TPR: 0.7205 [14315/19867]
+
+Epoch: 62/100
+
+Train Loss: 0.767 | 0.000 | 0.767, Acc: 87.5741 [5701776/6510800]
+
+IoU@0.5: Average: 0.549 | TPR: 0.6783 [110412/162770]
+
+Validation Loss: 0.951 | 0.000 | 0.951, Acc: 88.3585 [702167/794680]
+
+IoU@0.5: Average: 0.575 | TPR: 0.7274 [14452/19867]
+
+Epoch: 63/100
+
+Train Loss: 0.772 | 0.000 | 0.772, Acc: 87.5957 [5703179/6510800]
+
+IoU@0.5: Average: 0.552 | TPR: 0.6820 [111005/162770]
+
+Validation Loss: 0.879 | 0.000 | 0.879, Acc: 88.3947 [702455/794680]
+
+IoU@0.5: Average: 0.571 | TPR: 0.7144 [14192/19867]
+
+Epoch: 64/100
+
+Train Loss: 0.774 | 0.000 | 0.774, Acc: 87.5610 [5700924/6510800]
+
+IoU@0.5: Average: 0.557 | TPR: 0.6880 [111980/162770]
+
+Validation Loss: 0.880 | 0.000 | 0.880, Acc: 88.3757 [702304/794680]
+
+IoU@0.5: Average: 0.574 | TPR: 0.7161 [14226/19867]
+
+Epoch: 65/100
+
+Train Loss: 0.754 | 0.000 | 0.754, Acc: 87.5845 [5702451/6510800]
+
+IoU@0.5: Average: 0.547 | TPR: 0.6742 [109741/162770]
+
+Validation Loss: 0.870 | 0.000 | 0.870, Acc: 88.3905 [702422/794680]
+
+IoU@0.5: Average: 0.570 | TPR: 0.7098 [14102/19867]
+
+Epoch: 66/100
+
+Train Loss: 0.766 | 0.000 | 0.766, Acc: 87.5680 [5701380/6510800]
+
+IoU@0.5: Average: 0.550 | TPR: 0.6780 [110352/162770]
+
+Validation Loss: 0.927 | 0.000 | 0.927, Acc: 88.3634 [702206/794680]
+
+IoU@0.5: Average: 0.572 | TPR: 0.7226 [14356/19867]
+
+Epoch: 67/100
+
+Train Loss: 0.770 | 0.000 | 0.770, Acc: 87.5747 [5701814/6510800]
+
+IoU@0.5: Average: 0.549 | TPR: 0.6786 [110450/162770]
+
+Validation Loss: 0.921 | 0.000 | 0.921, Acc: 88.3853 [702380/794680]
+
+IoU@0.5: Average: 0.575 | TPR: 0.7228 [14359/19867]
+
+Epoch: 68/100
+
+Train Loss: 0.766 | 0.000 | 0.766, Acc: 87.5875 [5702647/6510800]
+
+IoU@0.5: Average: 0.553 | TPR: 0.6825 [111093/162770]
+
+Validation Loss: 0.886 | 0.000 | 0.886, Acc: 88.3911 [702426/794680]
+
+IoU@0.5: Average: 0.572 | TPR: 0.7182 [14269/19867]
+
+Epoch: 69/100
+
+Train Loss: 0.755 | 0.000 | 0.755, Acc: 87.5951 [5703142/6510800]
+
+IoU@0.5: Average: 0.550 | TPR: 0.6773 [110237/162770]
+
+Validation Loss: 0.860 | 0.000 | 0.860, Acc: 88.3821 [702355/794680]
+
+IoU@0.5: Average: 0.574 | TPR: 0.7122 [14149/19867]
+
+Epoch: 70/100
+
+Train Loss: 0.774 | 0.000 | 0.774, Acc: 87.5859 [5702541/6510800]
+
+IoU@0.5: Average: 0.551 | TPR: 0.6844 [111394/162770]
+
+Validation Loss: 0.828 | 0.000 | 0.828, Acc: 88.3919 [702433/794680]
+
+IoU@0.5: Average: 0.570 | TPR: 0.7028 [13962/19867]
+
+Epoch: 71/100
+
+Train Loss: 0.767 | 0.000 | 0.767, Acc: 87.5737 [5701747/6510800]
+
+IoU@0.5: Average: 0.552 | TPR: 0.6830 [111173/162770]
+
+Validation Loss: 0.815 | 0.000 | 0.815, Acc: 88.4092 [702570/794680]
+
+IoU@0.5: Average: 0.555 | TPR: 0.6842 [13593/19867]
+
+Epoch: 72/100
+
+Train Loss: 0.735 | 0.000 | 0.735, Acc: 87.6001 [5703467/6510800]
+
+IoU@0.5: Average: 0.538 | TPR: 0.6612 [107621/162770]
+
+Validation Loss: 0.840 | 0.000 | 0.840, Acc: 88.3861 [702387/794680]
+
+IoU@0.5: Average: 0.561 | TPR: 0.6959 [13825/19867]
+
+Epoch: 73/100
+
+Train Loss: 0.783 | 0.000 | 0.783, Acc: 87.5689 [5701438/6510800]
+
+IoU@0.5: Average: 0.552 | TPR: 0.6838 [111298/162770]
+
+Validation Loss: 0.888 | 0.000 | 0.888, Acc: 88.3795 [702334/794680]
+
+IoU@0.5: Average: 0.568 | TPR: 0.7119 [14144/19867]
+
+Epoch: 74/100
+
+Train Loss: 0.775 | 0.000 | 0.775, Acc: 87.5603 [5700875/6510800]
+
+IoU@0.5: Average: 0.552 | TPR: 0.6803 [110737/162770]
+
+Validation Loss: 0.943 | 0.000 | 0.943, Acc: 88.3856 [702383/794680]
+
+IoU@0.5: Average: 0.575 | TPR: 0.7287 [14478/19867]
+
+Epoch: 75/100
+
+Train Loss: 0.764 | 0.000 | 0.764, Acc: 87.5952 [5703146/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6750 [109876/162770]
+
+Validation Loss: 0.939 | 0.000 | 0.939, Acc: 88.3616 [702192/794680]
+
+IoU@0.5: Average: 0.573 | TPR: 0.7258 [14420/19867]
+
+Epoch: 76/100
+
+Train Loss: 0.768 | 0.000 | 0.768, Acc: 87.5844 [5702442/6510800]
+
+IoU@0.5: Average: 0.552 | TPR: 0.6804 [110741/162770]
+
+Validation Loss: 0.785 | 0.000 | 0.785, Acc: 88.3844 [702373/794680]
+
+IoU@0.5: Average: 0.559 | TPR: 0.6803 [13515/19867]
+
+Epoch: 77/100
+
+Train Loss: 0.774 | 0.000 | 0.774, Acc: 87.5986 [5703367/6510800]
+
+IoU@0.5: Average: 0.544 | TPR: 0.6750 [109863/162770]
+
+Validation Loss: 0.896 | 0.000 | 0.896, Acc: 88.4210 [702664/794680]
+
+IoU@0.5: Average: 0.558 | TPR: 0.7029 [13965/19867]
+
+Epoch: 78/100
+
+Train Loss: 0.746 | 0.000 | 0.746, Acc: 87.6091 [5704052/6510800]
+
+IoU@0.5: Average: 0.534 | TPR: 0.6574 [106998/162770]
+
+Validation Loss: 0.872 | 0.000 | 0.872, Acc: 88.4002 [702499/794680]
+
+IoU@0.5: Average: 0.547 | TPR: 0.6828 [13566/19867]
+
+Epoch: 79/100
+
+Train Loss: 0.765 | 0.000 | 0.765, Acc: 87.6209 [5704824/6510800]
+
+IoU@0.5: Average: 0.542 | TPR: 0.6717 [109339/162770]
+
+Validation Loss: 0.960 | 0.000 | 0.960, Acc: 88.3797 [702336/794680]
+
+IoU@0.5: Average: 0.570 | TPR: 0.7291 [14485/19867]
+
+Epoch: 80/100
+
+Train Loss: 0.783 | 0.000 | 0.783, Acc: 87.6145 [5704402/6510800]
+
+IoU@0.5: Average: 0.548 | TPR: 0.6810 [110850/162770]
+
+Validation Loss: 0.871 | 0.000 | 0.871, Acc: 88.4291 [702728/794680]
+
+IoU@0.5: Average: 0.556 | TPR: 0.6939 [13786/19867]
+
+Epoch: 81/100
+
+Train Loss: 0.766 | 0.000 | 0.766, Acc: 87.6368 [5705854/6510800]
+
+IoU@0.5: Average: 0.542 | TPR: 0.6704 [109115/162770]
+
+Validation Loss: 0.899 | 0.000 | 0.899, Acc: 88.4140 [702608/794680]
+
+IoU@0.5: Average: 0.563 | TPR: 0.7088 [14082/19867]
+
+Epoch: 82/100
+
+Train Loss: 0.775 | 0.000 | 0.775, Acc: 87.6192 [5704710/6510800]
+
+IoU@0.5: Average: 0.545 | TPR: 0.6757 [109991/162770]
+
+Validation Loss: 0.888 | 0.000 | 0.888, Acc: 88.4108 [702583/794680]
+
+IoU@0.5: Average: 0.565 | TPR: 0.7087 [14079/19867]
+
+Epoch: 83/100
+
+Train Loss: 0.777 | 0.000 | 0.777, Acc: 87.6068 [5703904/6510800]
+
+IoU@0.5: Average: 0.547 | TPR: 0.6792 [110559/162770]
+
+Validation Loss: 0.886 | 0.000 | 0.886, Acc: 88.4170 [702632/794680]
+
+IoU@0.5: Average: 0.564 | TPR: 0.7075 [14055/19867]
+
+Epoch: 84/100
+
+Train Loss: 0.785 | 0.000 | 0.785, Acc: 87.6359 [5705797/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6787 [110468/162770]
+
+Validation Loss: 0.890 | 0.000 | 0.890, Acc: 88.4289 [702727/794680]
+
+IoU@0.5: Average: 0.565 | TPR: 0.7083 [14071/19867]
+
+Epoch: 85/100
+
+Train Loss: 0.781 | 0.000 | 0.781, Acc: 87.6301 [5705422/6510800]
+
+IoU@0.5: Average: 0.547 | TPR: 0.6799 [110675/162770]
+
+Validation Loss: 0.904 | 0.000 | 0.904, Acc: 88.3894 [702413/794680]
+
+IoU@0.5: Average: 0.564 | TPR: 0.7106 [14118/19867]
+
+Epoch: 86/100
+
+Train Loss: 0.773 | 0.000 | 0.773, Acc: 87.6325 [5705575/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6773 [110250/162770]
+
+Validation Loss: 0.888 | 0.000 | 0.888, Acc: 88.4146 [702613/794680]
+
+IoU@0.5: Average: 0.562 | TPR: 0.7051 [14009/19867]
+
+Epoch: 87/100
+
+Train Loss: 0.772 | 0.000 | 0.772, Acc: 87.6196 [5704739/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6772 [110222/162770]
+
+Validation Loss: 0.876 | 0.000 | 0.876, Acc: 88.4332 [702761/794680]
+
+IoU@0.5: Average: 0.564 | TPR: 0.7061 [14028/19867]
+
+Epoch: 88/100
+
+Train Loss: 0.782 | 0.000 | 0.782, Acc: 87.6000 [5703463/6510800]
+
+IoU@0.5: Average: 0.547 | TPR: 0.6819 [110993/162770]
+
+Validation Loss: 0.875 | 0.000 | 0.875, Acc: 88.4468 [702869/794680]
+
+IoU@0.5: Average: 0.563 | TPR: 0.7051 [14008/19867]
+
+Epoch: 89/100
+
+Train Loss: 0.777 | 0.000 | 0.777, Acc: 87.6098 [5704101/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6796 [110619/162770]
+
+Validation Loss: 0.898 | 0.000 | 0.898, Acc: 88.4187 [702646/794680]
+
+IoU@0.5: Average: 0.564 | TPR: 0.7096 [14098/19867]
+
+Epoch: 90/100
+
+Train Loss: 0.771 | 0.000 | 0.771, Acc: 87.6259 [5705144/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6776 [110289/162770]
+
+Validation Loss: 0.861 | 0.000 | 0.861, Acc: 88.4116 [702589/794680]
+
+IoU@0.5: Average: 0.564 | TPR: 0.7051 [14009/19867]
+
+Epoch: 91/100
+
+Train Loss: 0.779 | 0.000 | 0.779, Acc: 87.6232 [5704973/6510800]
+
+IoU@0.5: Average: 0.548 | TPR: 0.6828 [111136/162770]
+
+Validation Loss: 0.880 | 0.000 | 0.880, Acc: 88.4153 [702619/794680]
+
+IoU@0.5: Average: 0.565 | TPR: 0.7107 [14119/19867]
+
+Epoch: 92/100
+
+Train Loss: 0.776 | 0.000 | 0.776, Acc: 87.6199 [5704758/6510800]
+
+IoU@0.5: Average: 0.548 | TPR: 0.6817 [110964/162770]
+
+Validation Loss: 0.874 | 0.000 | 0.874, Acc: 88.4111 [702585/794680]
+
+IoU@0.5: Average: 0.564 | TPR: 0.7052 [14010/19867]
+
+Epoch: 93/100
+
+Train Loss: 0.763 | 0.000 | 0.763, Acc: 87.6225 [5704926/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6769 [110177/162770]
+
+Validation Loss: 0.888 | 0.000 | 0.888, Acc: 88.4275 [702716/794680]
+
+IoU@0.5: Average: 0.561 | TPR: 0.7058 [14023/19867]
+
+Epoch: 94/100
+
+Train Loss: 0.779 | 0.000 | 0.779, Acc: 87.6151 [5704445/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6796 [110620/162770]
+
+Validation Loss: 0.886 | 0.000 | 0.886, Acc: 88.4184 [702643/794680]
+
+IoU@0.5: Average: 0.563 | TPR: 0.7062 [14030/19867]
+
+Epoch: 95/100
+
+Train Loss: 0.775 | 0.000 | 0.775, Acc: 87.6357 [5705788/6510800]
+
+IoU@0.5: Average: 0.546 | TPR: 0.6791 [110534/162770]
+
+Validation Loss: 0.851 | 0.000 | 0.851, Acc: 88.4234 [702683/794680]
+
+IoU@0.5: Average: 0.562 | TPR: 0.6997 [13900/19867]
+
+Epoch: 96/100
+
+Train Loss: 0.785 | 0.000 | 0.785, Acc: 87.6027 [5703635/6510800]
+
+IoU@0.5: Average: 0.549 | TPR: 0.6846 [111431/162770]
+
+Validation Loss: 0.882 | 0.000 | 0.882, Acc: 88.4216 [702669/794680]
+
+IoU@0.5: Average: 0.567 | TPR: 0.7099 [14103/19867]
+
+Epoch: 97/100
+
+Train Loss: 0.780 | 0.000 | 0.780, Acc: 87.6136 [5704344/6510800]
+
+IoU@0.5: Average: 0.549 | TPR: 0.6839 [111323/162770]
+
+Validation Loss: 0.896 | 0.000 | 0.896, Acc: 88.4205 [702660/794680]
+
+IoU@0.5: Average: 0.568 | TPR: 0.7132 [14169/19867]
+
+Epoch: 98/100
+
+Train Loss: 0.778 | 0.000 | 0.778, Acc: 87.6169 [5704562/6510800]
+
+IoU@0.5: Average: 0.547 | TPR: 0.6812 [110872/162770]
+
+Validation Loss: 0.882 | 0.000 | 0.882, Acc: 88.4012 [702507/794680]
+
+IoU@0.5: Average: 0.564 | TPR: 0.7076 [14057/19867]
+
+Epoch: 99/100
+
+Train Loss: 0.783 | 0.000 | 0.783, Acc: 87.6047 [5703766/6510800]
+
+IoU@0.5: Average: 0.549 | TPR: 0.6827 [111125/162770]
+
+Validation Loss: 0.860 | 0.000 | 0.860, Acc: 88.4167 [702630/794680]
+
+IoU@0.5: Average: 0.563 | TPR: 0.7037 [13980/19867]
+
+Epoch: 100/100
+
+Train Loss: 0.782 | 0.000 | 0.782, Acc: 87.6061 [5703860/6510800]
+
+IoU@0.5: Average: 0.549 | TPR: 0.6832 [111201/162770]
+
+Validation Loss: 0.894 | 0.000 | 0.894, Acc: 88.4128 [702599/794680]
+
+IoU@0.5: Average: 0.568 | TPR: 0.7121 [14147/19867]
+
+(torch_1.9_torchvision_10.0) -bash-4.2$ 
+

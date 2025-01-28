@@ -1,0 +1,1234 @@
+(torch_1.9_torchvision_10.0) -bash-4.2$ CUDA_VISIBLE_DEVICES="0" python AVS_train_M1_attributes.py 
+Warning: selected training on trainval split, hence validation is going to be performed on test split!
+customizable_VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (9): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (10): ReLU(inplace=True)
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): AdaptiveAvgPool2d(output_size=(2, 2))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=512, out_features=256, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=256, out_features=40, bias=True)
+  )
+)
+Epoch: 1/200
+
+/home/min/a/tibrayev/miniconda3/envs/torch_1.9_torchvision_10.0/lib/python3.8/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+Train Loss: 0.426, Acc: 80.7261 [5897432/7305480]
+
+Validation Loss: 0.406, Acc: 81.1006 [647572/798480]
+
+Epoch: 2/200
+
+Train Loss: 0.383, Acc: 82.6077 [6034890/7305480]
+
+Validation Loss: 0.361, Acc: 82.5890 [659457/798480]
+
+Epoch: 3/200
+
+Train Loss: 0.338, Acc: 84.6680 [6185401/7305480]
+
+Validation Loss: 0.316, Acc: 85.4132 [682007/798480]
+
+Epoch: 4/200
+
+Train Loss: 0.310, Acc: 86.1407 [6292989/7305480]
+
+Validation Loss: 0.300, Acc: 86.1824 [688149/798480]
+
+Epoch: 5/200
+
+Train Loss: 0.297, Acc: 86.6725 [6331839/7305480]
+
+Validation Loss: 0.286, Acc: 86.7384 [692589/798480]
+
+Epoch: 6/200
+
+Train Loss: 0.288, Acc: 87.0570 [6359929/7305480]
+
+Validation Loss: 0.279, Acc: 87.1774 [696094/798480]
+
+Epoch: 7/200
+
+Train Loss: 0.281, Acc: 87.3307 [6379929/7305480]
+
+Validation Loss: 0.271, Acc: 87.5001 [698671/798480]
+
+Epoch: 8/200
+
+Train Loss: 0.277, Acc: 87.5329 [6394698/7305480]
+
+Validation Loss: 0.268, Acc: 87.7274 [700486/798480]
+
+Epoch: 9/200
+
+Train Loss: 0.273, Acc: 87.6910 [6406245/7305480]
+
+Validation Loss: 0.264, Acc: 87.6286 [699697/798480]
+
+Epoch: 10/200
+
+Train Loss: 0.271, Acc: 87.7939 [6413769/7305480]
+
+Validation Loss: 0.260, Acc: 87.9472 [702241/798480]
+
+Epoch: 11/200
+
+Train Loss: 0.269, Acc: 87.9027 [6421713/7305480]
+
+Validation Loss: 0.259, Acc: 88.1638 [703970/798480]
+
+Epoch: 12/200
+
+Train Loss: 0.267, Acc: 87.9837 [6427630/7305480]
+
+Validation Loss: 0.256, Acc: 88.3953 [705819/798480]
+
+Epoch: 13/200
+
+Train Loss: 0.265, Acc: 88.0740 [6434229/7305480]
+
+Validation Loss: 0.257, Acc: 88.1745 [704056/798480]
+
+Epoch: 14/200
+
+Train Loss: 0.263, Acc: 88.1646 [6440848/7305480]
+
+Validation Loss: 0.253, Acc: 88.3366 [705350/798480]
+
+Epoch: 15/200
+
+Train Loss: 0.261, Acc: 88.2267 [6445387/7305480]
+
+Validation Loss: 0.255, Acc: 88.1828 [704122/798480]
+
+Epoch: 16/200
+
+Train Loss: 0.260, Acc: 88.2684 [6448430/7305480]
+
+Validation Loss: 0.252, Acc: 88.1337 [703730/798480]
+
+Epoch: 17/200
+
+Train Loss: 0.260, Acc: 88.3064 [6451203/7305480]
+
+Validation Loss: 0.249, Acc: 88.5898 [707372/798480]
+
+Epoch: 18/200
+
+Train Loss: 0.258, Acc: 88.3542 [6454698/7305480]
+
+Validation Loss: 0.248, Acc: 88.4423 [706194/798480]
+
+Epoch: 19/200
+
+Train Loss: 0.258, Acc: 88.3861 [6457026/7305480]
+
+Validation Loss: 0.250, Acc: 88.5062 [706704/798480]
+
+Epoch: 20/200
+
+Train Loss: 0.257, Acc: 88.4117 [6458899/7305480]
+
+Validation Loss: 0.250, Acc: 88.4759 [706462/798480]
+
+Epoch: 21/200
+
+Train Loss: 0.257, Acc: 88.4345 [6460564/7305480]
+
+Validation Loss: 0.252, Acc: 88.6285 [707681/798480]
+
+Epoch: 22/200
+
+Train Loss: 0.256, Acc: 88.4719 [6463295/7305480]
+
+Validation Loss: 0.244, Acc: 88.6938 [708202/798480]
+
+Epoch: 23/200
+
+Train Loss: 0.256, Acc: 88.4762 [6463608/7305480]
+
+Validation Loss: 0.246, Acc: 88.5942 [707407/798480]
+
+Epoch: 24/200
+
+Train Loss: 0.255, Acc: 88.5096 [6466049/7305480]
+
+Validation Loss: 0.247, Acc: 88.7838 [708921/798480]
+
+Epoch: 25/200
+
+Train Loss: 0.255, Acc: 88.5233 [6467051/7305480]
+
+Validation Loss: 0.244, Acc: 88.6853 [708134/798480]
+
+Epoch: 26/200
+
+Train Loss: 0.255, Acc: 88.5244 [6467129/7305480]
+
+Validation Loss: 0.246, Acc: 88.4731 [706440/798480]
+
+Epoch: 27/200
+
+Train Loss: 0.254, Acc: 88.5495 [6468968/7305480]
+
+Validation Loss: 0.246, Acc: 88.7414 [708582/798480]
+
+Epoch: 28/200
+
+Train Loss: 0.254, Acc: 88.5638 [6470008/7305480]
+
+Validation Loss: 0.248, Acc: 88.4298 [706094/798480]
+
+Epoch: 29/200
+
+Train Loss: 0.254, Acc: 88.5572 [6469529/7305480]
+
+Validation Loss: 0.244, Acc: 88.5573 [707112/798480]
+
+Epoch: 30/200
+
+Train Loss: 0.253, Acc: 88.5915 [6472032/7305480]
+
+Validation Loss: 0.246, Acc: 88.4698 [706414/798480]
+
+Epoch: 31/200
+
+Train Loss: 0.253, Acc: 88.5807 [6471247/7305480]
+
+Validation Loss: 0.243, Acc: 88.7347 [708529/798480]
+
+Epoch: 32/200
+
+Train Loss: 0.253, Acc: 88.6138 [6473664/7305480]
+
+Validation Loss: 0.245, Acc: 88.8786 [709678/798480]
+
+Epoch: 33/200
+
+Train Loss: 0.253, Acc: 88.6206 [6474160/7305480]
+
+Validation Loss: 0.243, Acc: 88.8368 [709344/798480]
+
+Epoch: 34/200
+
+Train Loss: 0.253, Acc: 88.6191 [6474047/7305480]
+
+Validation Loss: 0.243, Acc: 88.7700 [708811/798480]
+
+Epoch: 35/200
+
+Train Loss: 0.252, Acc: 88.6441 [6475874/7305480]
+
+Validation Loss: 0.243, Acc: 88.5899 [707373/798480]
+
+Epoch: 36/200
+
+Train Loss: 0.252, Acc: 88.6460 [6476014/7305480]
+
+Validation Loss: 0.242, Acc: 88.8601 [709530/798480]
+
+Epoch: 37/200
+
+Train Loss: 0.252, Acc: 88.6525 [6476492/7305480]
+
+Validation Loss: 0.243, Acc: 88.6782 [708078/798480]
+
+Epoch: 38/200
+
+Train Loss: 0.252, Acc: 88.6475 [6476122/7305480]
+
+Validation Loss: 0.241, Acc: 88.8915 [709781/798480]
+
+Epoch: 39/200
+
+Train Loss: 0.252, Acc: 88.6597 [6477018/7305480]
+
+Validation Loss: 0.245, Acc: 88.4984 [706642/798480]
+
+Epoch: 40/200
+
+Train Loss: 0.252, Acc: 88.6576 [6476861/7305480]
+
+Validation Loss: 0.242, Acc: 88.7784 [708878/798480]
+
+Epoch: 41/200
+
+Train Loss: 0.251, Acc: 88.6728 [6477971/7305480]
+
+Validation Loss: 0.243, Acc: 89.0975 [711426/798480]
+
+Epoch: 42/200
+
+Train Loss: 0.251, Acc: 88.6905 [6479266/7305480]
+
+Validation Loss: 0.243, Acc: 88.9773 [710466/798480]
+
+Epoch: 43/200
+
+Train Loss: 0.251, Acc: 88.6811 [6478583/7305480]
+
+Validation Loss: 0.242, Acc: 88.7723 [708829/798480]
+
+Epoch: 44/200
+
+Train Loss: 0.251, Acc: 88.6947 [6479570/7305480]
+
+Validation Loss: 0.243, Acc: 88.7546 [708688/798480]
+
+Epoch: 45/200
+
+Train Loss: 0.251, Acc: 88.6980 [6479816/7305480]
+
+Validation Loss: 0.245, Acc: 88.8431 [709394/798480]
+
+Epoch: 46/200
+
+Train Loss: 0.251, Acc: 88.6994 [6479919/7305480]
+
+Validation Loss: 0.241, Acc: 88.9951 [710608/798480]
+
+Epoch: 47/200
+
+Train Loss: 0.251, Acc: 88.7121 [6480844/7305480]
+
+Validation Loss: 0.242, Acc: 88.8379 [709353/798480]
+
+Epoch: 48/200
+
+Train Loss: 0.251, Acc: 88.7049 [6480318/7305480]
+
+Validation Loss: 0.242, Acc: 88.8704 [709612/798480]
+
+Epoch: 49/200
+
+Train Loss: 0.250, Acc: 88.7211 [6481505/7305480]
+
+Validation Loss: 0.241, Acc: 88.9320 [710104/798480]
+
+Epoch: 50/200
+
+Train Loss: 0.250, Acc: 88.7141 [6480994/7305480]
+
+Validation Loss: 0.241, Acc: 88.8462 [709419/798480]
+
+Epoch: 51/200
+
+Train Loss: 0.250, Acc: 88.7293 [6482099/7305480]
+
+Validation Loss: 0.245, Acc: 88.5884 [707361/798480]
+
+Epoch: 52/200
+
+Train Loss: 0.250, Acc: 88.7361 [6482599/7305480]
+
+Validation Loss: 0.242, Acc: 88.8610 [709537/798480]
+
+Epoch: 53/200
+
+Train Loss: 0.250, Acc: 88.7275 [6481970/7305480]
+
+Validation Loss: 0.241, Acc: 88.9662 [710377/798480]
+
+Epoch: 54/200
+
+Train Loss: 0.250, Acc: 88.7336 [6482418/7305480]
+
+Validation Loss: 0.250, Acc: 88.3785 [705685/798480]
+
+Epoch: 55/200
+
+Train Loss: 0.250, Acc: 88.7464 [6483349/7305480]
+
+Validation Loss: 0.240, Acc: 88.8163 [709180/798480]
+
+Epoch: 56/200
+
+Train Loss: 0.250, Acc: 88.7369 [6482658/7305480]
+
+Validation Loss: 0.244, Acc: 88.8752 [709651/798480]
+
+Epoch: 57/200
+
+Train Loss: 0.250, Acc: 88.7418 [6483017/7305480]
+
+Validation Loss: 0.242, Acc: 88.8482 [709435/798480]
+
+Epoch: 58/200
+
+Train Loss: 0.250, Acc: 88.7488 [6483526/7305480]
+
+Validation Loss: 0.239, Acc: 88.8935 [709797/798480]
+
+Epoch: 59/200
+
+Train Loss: 0.250, Acc: 88.7628 [6484552/7305480]
+
+Validation Loss: 0.243, Acc: 88.4755 [706459/798480]
+
+Epoch: 60/200
+
+Train Loss: 0.250, Acc: 88.7581 [6484203/7305480]
+
+Validation Loss: 0.242, Acc: 88.9389 [710159/798480]
+
+Epoch: 61/200
+
+Train Loss: 0.250, Acc: 88.7568 [6484113/7305480]
+
+Validation Loss: 0.240, Acc: 88.9925 [710587/798480]
+
+Epoch: 62/200
+
+Train Loss: 0.250, Acc: 88.7518 [6483745/7305480]
+
+Validation Loss: 0.238, Acc: 89.0360 [710935/798480]
+
+Epoch: 63/200
+
+Train Loss: 0.250, Acc: 88.7562 [6484068/7305480]
+
+Validation Loss: 0.242, Acc: 88.8945 [709805/798480]
+
+Epoch: 64/200
+
+Train Loss: 0.249, Acc: 88.7736 [6485338/7305480]
+
+Validation Loss: 0.240, Acc: 88.7503 [708653/798480]
+
+Epoch: 65/200
+
+Train Loss: 0.249, Acc: 88.7611 [6484421/7305480]
+
+Validation Loss: 0.241, Acc: 88.8469 [709425/798480]
+
+Epoch: 66/200
+
+Train Loss: 0.250, Acc: 88.7700 [6485071/7305480]
+
+Validation Loss: 0.240, Acc: 89.0523 [711065/798480]
+
+Epoch: 67/200
+
+Train Loss: 0.249, Acc: 88.7769 [6485578/7305480]
+
+Validation Loss: 0.240, Acc: 88.9753 [710450/798480]
+
+Epoch: 68/200
+
+Train Loss: 0.249, Acc: 88.7871 [6486321/7305480]
+
+Validation Loss: 0.238, Acc: 89.0843 [711320/798480]
+
+Epoch: 69/200
+
+Train Loss: 0.249, Acc: 88.7805 [6485841/7305480]
+
+Validation Loss: 0.242, Acc: 88.6890 [708164/798480]
+
+Epoch: 70/200
+
+Train Loss: 0.249, Acc: 88.7814 [6485909/7305480]
+
+Validation Loss: 0.240, Acc: 88.7973 [709029/798480]
+
+Epoch: 71/200
+
+Train Loss: 0.249, Acc: 88.7934 [6486782/7305480]
+
+Validation Loss: 0.243, Acc: 88.4786 [706484/798480]
+
+Epoch: 72/200
+
+Train Loss: 0.249, Acc: 88.7822 [6485969/7305480]
+
+Validation Loss: 0.240, Acc: 88.8957 [709814/798480]
+
+Epoch: 73/200
+
+Train Loss: 0.249, Acc: 88.7960 [6486975/7305480]
+
+Validation Loss: 0.240, Acc: 88.8433 [709396/798480]
+
+Epoch: 74/200
+
+Train Loss: 0.249, Acc: 88.8107 [6488047/7305480]
+
+Validation Loss: 0.239, Acc: 89.1074 [711505/798480]
+
+Epoch: 75/200
+
+Train Loss: 0.249, Acc: 88.7972 [6487060/7305480]
+
+Validation Loss: 0.241, Acc: 88.7019 [708267/798480]
+
+Epoch: 76/200
+
+Train Loss: 0.249, Acc: 88.7923 [6486703/7305480]
+
+Validation Loss: 0.241, Acc: 88.9267 [710062/798480]
+
+Epoch: 77/200
+
+Train Loss: 0.249, Acc: 88.7966 [6487018/7305480]
+
+Validation Loss: 0.240, Acc: 88.8446 [709406/798480]
+
+Epoch: 78/200
+
+Train Loss: 0.248, Acc: 88.8141 [6488295/7305480]
+
+Validation Loss: 0.238, Acc: 88.9382 [710154/798480]
+
+Epoch: 79/200
+
+Train Loss: 0.249, Acc: 88.8020 [6487416/7305480]
+
+Validation Loss: 0.238, Acc: 89.0856 [711331/798480]
+
+Epoch: 80/200
+
+Train Loss: 0.249, Acc: 88.7994 [6487222/7305480]
+
+Validation Loss: 0.237, Acc: 89.0389 [710958/798480]
+
+Epoch: 81/200
+
+Train Loss: 0.248, Acc: 88.8140 [6488290/7305480]
+
+Validation Loss: 0.240, Acc: 88.9218 [710023/798480]
+
+Epoch: 82/200
+
+Train Loss: 0.248, Acc: 88.8019 [6487405/7305480]
+
+Validation Loss: 0.243, Acc: 88.6615 [707944/798480]
+
+Epoch: 83/200
+
+Train Loss: 0.248, Acc: 88.8228 [6488930/7305480]
+
+Validation Loss: 0.242, Acc: 88.7123 [708350/798480]
+
+Epoch: 84/200
+
+Train Loss: 0.248, Acc: 88.8059 [6487696/7305480]
+
+Validation Loss: 0.246, Acc: 88.5347 [706932/798480]
+
+Epoch: 85/200
+
+Train Loss: 0.248, Acc: 88.8122 [6488155/7305480]
+
+Validation Loss: 0.240, Acc: 88.9419 [710183/798480]
+
+Epoch: 86/200
+
+Train Loss: 0.248, Acc: 88.8231 [6488956/7305480]
+
+Validation Loss: 0.238, Acc: 88.9583 [710314/798480]
+
+Epoch: 87/200
+
+Train Loss: 0.248, Acc: 88.8219 [6488863/7305480]
+
+Validation Loss: 0.239, Acc: 88.9365 [710140/798480]
+
+Epoch: 88/200
+
+Train Loss: 0.248, Acc: 88.8124 [6488175/7305480]
+
+Validation Loss: 0.239, Acc: 88.9465 [710220/798480]
+
+Epoch: 89/200
+
+Train Loss: 0.248, Acc: 88.8170 [6488506/7305480]
+
+Validation Loss: 0.237, Acc: 89.0193 [710801/798480]
+
+Epoch: 90/200
+
+Train Loss: 0.248, Acc: 88.8283 [6489335/7305480]
+
+Validation Loss: 0.244, Acc: 88.4298 [706094/798480]
+
+Epoch: 91/200
+
+Train Loss: 0.248, Acc: 88.8168 [6488493/7305480]
+
+Validation Loss: 0.237, Acc: 88.9153 [709971/798480]
+
+Epoch: 92/200
+
+Train Loss: 0.248, Acc: 88.8293 [6489407/7305480]
+
+Validation Loss: 0.238, Acc: 89.0270 [710863/798480]
+
+Epoch: 93/200
+
+Train Loss: 0.248, Acc: 88.8164 [6488466/7305480]
+
+Validation Loss: 0.238, Acc: 88.9806 [710492/798480]
+
+Epoch: 94/200
+
+Train Loss: 0.248, Acc: 88.8228 [6488929/7305480]
+
+Validation Loss: 0.238, Acc: 88.9953 [710610/798480]
+
+Epoch: 95/200
+
+Train Loss: 0.248, Acc: 88.8275 [6489273/7305480]
+
+Validation Loss: 0.239, Acc: 88.9278 [710071/798480]
+
+Epoch: 96/200
+
+Train Loss: 0.248, Acc: 88.8371 [6489979/7305480]
+
+Validation Loss: 0.239, Acc: 89.0974 [711425/798480]
+
+Epoch: 97/200
+
+Train Loss: 0.248, Acc: 88.8191 [6488662/7305480]
+
+Validation Loss: 0.242, Acc: 88.7927 [708992/798480]
+
+Epoch: 98/200
+
+Train Loss: 0.248, Acc: 88.8206 [6488769/7305480]
+
+Validation Loss: 0.240, Acc: 88.8235 [709238/798480]
+
+Epoch: 99/200
+
+Train Loss: 0.248, Acc: 88.8249 [6489087/7305480]
+
+Validation Loss: 0.238, Acc: 89.1414 [711776/798480]
+
+Epoch: 100/200
+
+Train Loss: 0.248, Acc: 88.8241 [6489030/7305480]
+
+Validation Loss: 0.239, Acc: 88.7739 [708842/798480]
+
+Epoch: 101/200
+
+Train Loss: 0.240, Acc: 89.1472 [6512628/7305480]
+
+Validation Loss: 0.231, Acc: 89.2312 [712493/798480]
+
+Epoch: 102/200
+
+Train Loss: 0.238, Acc: 89.2137 [6517491/7305480]
+
+Validation Loss: 0.231, Acc: 89.2365 [712536/798480]
+
+Epoch: 103/200
+
+Train Loss: 0.238, Acc: 89.2154 [6517616/7305480]
+
+Validation Loss: 0.230, Acc: 89.2868 [712937/798480]
+
+Epoch: 104/200
+
+Train Loss: 0.238, Acc: 89.2277 [6518512/7305480]
+
+Validation Loss: 0.230, Acc: 89.1931 [712189/798480]
+
+Epoch: 105/200
+
+Train Loss: 0.237, Acc: 89.2396 [6519383/7305480]
+
+Validation Loss: 0.229, Acc: 89.2910 [712971/798480]
+
+Epoch: 106/200
+
+Train Loss: 0.237, Acc: 89.2338 [6518957/7305480]
+
+Validation Loss: 0.229, Acc: 89.2409 [712571/798480]
+
+Epoch: 107/200
+
+Train Loss: 0.237, Acc: 89.2472 [6519939/7305480]
+
+Validation Loss: 0.229, Acc: 89.3193 [713197/798480]
+
+Epoch: 108/200
+
+Train Loss: 0.237, Acc: 89.2608 [6520932/7305480]
+
+Validation Loss: 0.230, Acc: 89.1610 [711933/798480]
+
+Epoch: 109/200
+
+Train Loss: 0.237, Acc: 89.2649 [6521228/7305480]
+
+Validation Loss: 0.230, Acc: 89.3220 [713218/798480]
+
+Epoch: 110/200
+
+Train Loss: 0.236, Acc: 89.2748 [6521952/7305480]
+
+Validation Loss: 0.229, Acc: 89.2330 [712508/798480]
+
+Epoch: 111/200
+
+Train Loss: 0.236, Acc: 89.2878 [6522900/7305480]
+
+Validation Loss: 0.229, Acc: 89.1793 [712079/798480]
+
+Epoch: 112/200
+
+Train Loss: 0.236, Acc: 89.2828 [6522536/7305480]
+
+Validation Loss: 0.229, Acc: 89.2871 [712940/798480]
+
+Epoch: 113/200
+
+Train Loss: 0.236, Acc: 89.2965 [6523541/7305480]
+
+Validation Loss: 0.230, Acc: 89.1035 [711474/798480]
+
+Epoch: 114/200
+
+Train Loss: 0.236, Acc: 89.2901 [6523074/7305480]
+
+Validation Loss: 0.230, Acc: 89.1850 [712124/798480]
+
+Epoch: 115/200
+
+Train Loss: 0.236, Acc: 89.2912 [6523150/7305480]
+
+Validation Loss: 0.229, Acc: 89.3558 [713488/798480]
+
+Epoch: 116/200
+
+Train Loss: 0.236, Acc: 89.2980 [6523647/7305480]
+
+Validation Loss: 0.228, Acc: 89.2814 [712894/798480]
+
+Epoch: 117/200
+
+Train Loss: 0.236, Acc: 89.2942 [6523373/7305480]
+
+Validation Loss: 0.231, Acc: 89.0315 [710899/798480]
+
+Epoch: 118/200
+
+Train Loss: 0.236, Acc: 89.3050 [6524161/7305480]
+
+Validation Loss: 0.229, Acc: 89.2613 [712734/798480]
+
+Epoch: 119/200
+
+Train Loss: 0.236, Acc: 89.3082 [6524394/7305480]
+
+Validation Loss: 0.229, Acc: 89.3213 [713213/798480]
+
+Epoch: 120/200
+
+Train Loss: 0.235, Acc: 89.3082 [6524392/7305480]
+
+Validation Loss: 0.229, Acc: 89.2979 [713026/798480]
+
+Epoch: 121/200
+
+Train Loss: 0.235, Acc: 89.3163 [6524985/7305480]
+
+Validation Loss: 0.229, Acc: 89.2737 [712833/798480]
+
+Epoch: 122/200
+
+Train Loss: 0.235, Acc: 89.3179 [6525099/7305480]
+
+Validation Loss: 0.228, Acc: 89.3211 [713211/798480]
+
+Epoch: 123/200
+
+Train Loss: 0.235, Acc: 89.3186 [6525155/7305480]
+
+Validation Loss: 0.228, Acc: 89.3425 [713382/798480]
+
+Epoch: 124/200
+
+Train Loss: 0.235, Acc: 89.3284 [6525871/7305480]
+
+Validation Loss: 0.229, Acc: 89.3161 [713171/798480]
+
+Epoch: 125/200
+
+Train Loss: 0.235, Acc: 89.3208 [6525316/7305480]
+
+Validation Loss: 0.227, Acc: 89.3769 [713657/798480]
+
+Epoch: 126/200
+
+Train Loss: 0.235, Acc: 89.3266 [6525736/7305480]
+
+Validation Loss: 0.228, Acc: 89.3704 [713605/798480]
+
+Epoch: 127/200
+
+Train Loss: 0.235, Acc: 89.3308 [6526043/7305480]
+
+Validation Loss: 0.228, Acc: 89.2714 [712814/798480]
+
+Epoch: 128/200
+
+Train Loss: 0.235, Acc: 89.3430 [6526935/7305480]
+
+Validation Loss: 0.227, Acc: 89.3122 [713140/798480]
+
+Epoch: 129/200
+
+Train Loss: 0.235, Acc: 89.3434 [6526963/7305480]
+
+Validation Loss: 0.228, Acc: 89.3985 [713829/798480]
+
+Epoch: 130/200
+
+Train Loss: 0.235, Acc: 89.3369 [6526490/7305480]
+
+Validation Loss: 0.228, Acc: 89.2933 [712989/798480]
+
+Epoch: 131/200
+
+Train Loss: 0.235, Acc: 89.3425 [6526897/7305480]
+
+Validation Loss: 0.227, Acc: 89.3320 [713298/798480]
+
+Epoch: 132/200
+
+Train Loss: 0.235, Acc: 89.3415 [6526825/7305480]
+
+Validation Loss: 0.228, Acc: 89.3444 [713397/798480]
+
+Epoch: 133/200
+
+Train Loss: 0.235, Acc: 89.3386 [6526612/7305480]
+
+Validation Loss: 0.228, Acc: 89.3528 [713464/798480]
+
+Epoch: 134/200
+
+Train Loss: 0.235, Acc: 89.3444 [6527039/7305480]
+
+Validation Loss: 0.229, Acc: 89.2557 [712689/798480]
+
+Epoch: 135/200
+
+Train Loss: 0.235, Acc: 89.3461 [6527161/7305480]
+
+Validation Loss: 0.227, Acc: 89.4642 [714354/798480]
+
+Epoch: 136/200
+
+Train Loss: 0.234, Acc: 89.3436 [6526976/7305480]
+
+Validation Loss: 0.228, Acc: 89.2899 [712962/798480]
+
+Epoch: 137/200
+
+Train Loss: 0.234, Acc: 89.3635 [6528434/7305480]
+
+Validation Loss: 0.228, Acc: 89.3133 [713149/798480]
+
+Epoch: 138/200
+
+Train Loss: 0.234, Acc: 89.3515 [6527558/7305480]
+
+Validation Loss: 0.228, Acc: 89.2699 [712802/798480]
+
+Epoch: 139/200
+
+Train Loss: 0.234, Acc: 89.3494 [6527404/7305480]
+
+Validation Loss: 0.228, Acc: 89.4061 [713890/798480]
+
+Epoch: 140/200
+
+Train Loss: 0.234, Acc: 89.3593 [6528127/7305480]
+
+Validation Loss: 0.227, Acc: 89.4017 [713855/798480]
+
+Epoch: 141/200
+
+Train Loss: 0.234, Acc: 89.3638 [6528452/7305480]
+
+Validation Loss: 0.228, Acc: 89.3533 [713468/798480]
+
+Epoch: 142/200
+
+Train Loss: 0.234, Acc: 89.3647 [6528522/7305480]
+
+Validation Loss: 0.228, Acc: 89.4201 [714002/798480]
+
+Epoch: 143/200
+
+Train Loss: 0.234, Acc: 89.3641 [6528475/7305480]
+
+Validation Loss: 0.228, Acc: 89.2102 [712326/798480]
+
+Epoch: 144/200
+
+Train Loss: 0.234, Acc: 89.3688 [6528823/7305480]
+
+Validation Loss: 0.228, Acc: 89.2726 [712824/798480]
+
+Epoch: 145/200
+
+Train Loss: 0.234, Acc: 89.3767 [6529398/7305480]
+
+Validation Loss: 0.227, Acc: 89.3142 [713156/798480]
+
+Epoch: 146/200
+
+Train Loss: 0.234, Acc: 89.3644 [6528502/7305480]
+
+Validation Loss: 0.227, Acc: 89.3748 [713640/798480]
+
+Epoch: 147/200
+
+Train Loss: 0.234, Acc: 89.3761 [6529355/7305480]
+
+Validation Loss: 0.227, Acc: 89.3017 [713056/798480]
+
+Epoch: 148/200
+
+Train Loss: 0.234, Acc: 89.3694 [6528867/7305480]
+
+Validation Loss: 0.227, Acc: 89.4204 [714004/798480]
+
+Epoch: 149/200
+
+Train Loss: 0.234, Acc: 89.3809 [6529707/7305480]
+
+Validation Loss: 0.228, Acc: 89.3617 [713535/798480]
+
+Epoch: 150/200
+
+Train Loss: 0.234, Acc: 89.3696 [6528878/7305480]
+
+Validation Loss: 0.227, Acc: 89.3286 [713271/798480]
+
+Epoch: 151/200
+
+Train Loss: 0.232, Acc: 89.4323 [6533462/7305480]
+
+Validation Loss: 0.226, Acc: 89.4165 [713973/798480]
+
+Epoch: 152/200
+
+Train Loss: 0.232, Acc: 89.4466 [6534504/7305480]
+
+Validation Loss: 0.226, Acc: 89.4335 [714109/798480]
+
+Epoch: 153/200
+
+Train Loss: 0.232, Acc: 89.4501 [6534757/7305480]
+
+Validation Loss: 0.226, Acc: 89.3767 [713655/798480]
+
+Epoch: 154/200
+
+Train Loss: 0.232, Acc: 89.4561 [6535198/7305480]
+
+Validation Loss: 0.226, Acc: 89.4614 [714331/798480]
+
+Epoch: 155/200
+
+Train Loss: 0.232, Acc: 89.4638 [6535762/7305480]
+
+Validation Loss: 0.226, Acc: 89.4399 [714160/798480]
+
+Epoch: 156/200
+
+Train Loss: 0.232, Acc: 89.4418 [6534152/7305480]
+
+Validation Loss: 0.226, Acc: 89.4268 [714055/798480]
+
+Epoch: 157/200
+
+Train Loss: 0.232, Acc: 89.4583 [6535360/7305480]
+
+Validation Loss: 0.226, Acc: 89.4813 [714490/798480]
+
+Epoch: 158/200
+
+Train Loss: 0.232, Acc: 89.4654 [6535880/7305480]
+
+Validation Loss: 0.226, Acc: 89.4417 [714174/798480]
+
+Epoch: 159/200
+
+Train Loss: 0.232, Acc: 89.4597 [6535458/7305480]
+
+Validation Loss: 0.226, Acc: 89.4019 [713856/798480]
+
+Epoch: 160/200
+
+Train Loss: 0.232, Acc: 89.4597 [6535461/7305480]
+
+Validation Loss: 0.226, Acc: 89.4215 [714013/798480]
+
+Epoch: 161/200
+
+Train Loss: 0.232, Acc: 89.4622 [6535644/7305480]
+
+Validation Loss: 0.226, Acc: 89.4195 [713997/798480]
+
+Epoch: 162/200
+
+Train Loss: 0.232, Acc: 89.4532 [6534989/7305480]
+
+Validation Loss: 0.226, Acc: 89.4347 [714118/798480]
+
+Epoch: 163/200
+
+Train Loss: 0.232, Acc: 89.4526 [6534944/7305480]
+
+Validation Loss: 0.226, Acc: 89.4161 [713970/798480]
+
+Epoch: 164/200
+
+Train Loss: 0.232, Acc: 89.4437 [6534295/7305480]
+
+Validation Loss: 0.226, Acc: 89.4409 [714168/798480]
+
+Epoch: 165/200
+
+Train Loss: 0.232, Acc: 89.4626 [6535674/7305480]
+
+Validation Loss: 0.226, Acc: 89.4060 [713889/798480]
+
+Epoch: 166/200
+
+Train Loss: 0.232, Acc: 89.4635 [6535735/7305480]
+
+Validation Loss: 0.226, Acc: 89.4476 [714221/798480]
+
+Epoch: 167/200
+
+Train Loss: 0.232, Acc: 89.4651 [6535852/7305480]
+
+Validation Loss: 0.226, Acc: 89.4217 [714014/798480]
+
+Epoch: 168/200
+
+Train Loss: 0.232, Acc: 89.4619 [6535623/7305480]
+
+Validation Loss: 0.226, Acc: 89.4046 [713878/798480]
+
+Epoch: 169/200
+
+Train Loss: 0.232, Acc: 89.4543 [6535067/7305480]
+
+Validation Loss: 0.226, Acc: 89.4076 [713902/798480]
+
+Epoch: 170/200
+
+Train Loss: 0.232, Acc: 89.4761 [6536658/7305480]
+
+Validation Loss: 0.226, Acc: 89.4164 [713972/798480]
+
+Epoch: 171/200
+
+Train Loss: 0.232, Acc: 89.4564 [6535219/7305480]
+
+Validation Loss: 0.226, Acc: 89.3877 [713743/798480]
+
+Epoch: 172/200
+
+Train Loss: 0.232, Acc: 89.4618 [6535614/7305480]
+
+Validation Loss: 0.226, Acc: 89.4083 [713907/798480]
+
+Epoch: 173/200
+
+Train Loss: 0.232, Acc: 89.4571 [6535274/7305480]
+
+Validation Loss: 0.226, Acc: 89.4483 [714227/798480]
+
+Epoch: 174/200
+
+Train Loss: 0.232, Acc: 89.4595 [6535449/7305480]
+
+Validation Loss: 0.226, Acc: 89.4310 [714089/798480]
+
+Epoch: 175/200
+
+Train Loss: 0.232, Acc: 89.4625 [6535662/7305480]
+
+Validation Loss: 0.226, Acc: 89.4099 [713920/798480]
+
+Epoch: 176/200
+
+Train Loss: 0.232, Acc: 89.4606 [6535523/7305480]
+
+Validation Loss: 0.226, Acc: 89.4600 [714320/798480]
+
+Epoch: 177/200
+
+Train Loss: 0.232, Acc: 89.4730 [6536429/7305480]
+
+Validation Loss: 0.225, Acc: 89.4339 [714112/798480]
+
+Epoch: 178/200
+
+Train Loss: 0.232, Acc: 89.4642 [6535792/7305480]
+
+Validation Loss: 0.226, Acc: 89.4121 [713938/798480]
+
+Epoch: 179/200
+
+Train Loss: 0.232, Acc: 89.4704 [6536242/7305480]
+
+Validation Loss: 0.226, Acc: 89.4259 [714048/798480]
+
+Epoch: 180/200
+
+Train Loss: 0.232, Acc: 89.4669 [6535987/7305480]
+
+Validation Loss: 0.226, Acc: 89.4158 [713967/798480]
+
+Epoch: 181/200
+
+Train Loss: 0.232, Acc: 89.4595 [6535443/7305480]
+
+Validation Loss: 0.225, Acc: 89.4505 [714244/798480]
+
+Epoch: 182/200
+
+Train Loss: 0.232, Acc: 89.4633 [6535722/7305480]
+
+Validation Loss: 0.226, Acc: 89.4041 [713874/798480]
+
+Epoch: 183/200
+
+Train Loss: 0.232, Acc: 89.4630 [6535698/7305480]
+
+Validation Loss: 0.226, Acc: 89.4111 [713930/798480]
+
+Epoch: 184/200
+
+Train Loss: 0.232, Acc: 89.4702 [6536228/7305480]
+
+Validation Loss: 0.226, Acc: 89.4690 [714392/798480]
+
+Epoch: 185/200
+
+Train Loss: 0.232, Acc: 89.4614 [6535587/7305480]
+
+Validation Loss: 0.226, Acc: 89.3964 [713812/798480]
+
+Epoch: 186/200
+
+Train Loss: 0.232, Acc: 89.4720 [6536359/7305480]
+
+Validation Loss: 0.226, Acc: 89.4154 [713964/798480]
+
+Epoch: 187/200
+
+Train Loss: 0.232, Acc: 89.4673 [6536019/7305480]
+
+Validation Loss: 0.225, Acc: 89.4717 [714414/798480]
+
+Epoch: 188/200
+
+Train Loss: 0.232, Acc: 89.4731 [6536436/7305480]
+
+Validation Loss: 0.226, Acc: 89.4074 [713900/798480]
+
+Epoch: 189/200
+
+Train Loss: 0.232, Acc: 89.4738 [6536493/7305480]
+
+Validation Loss: 0.226, Acc: 89.4545 [714276/798480]
+
+Epoch: 190/200
+
+Train Loss: 0.232, Acc: 89.4591 [6535418/7305480]
+
+Validation Loss: 0.226, Acc: 89.4155 [713965/798480]
+
+Epoch: 191/200
+
+Train Loss: 0.232, Acc: 89.4637 [6535750/7305480]
+
+Validation Loss: 0.225, Acc: 89.4041 [713874/798480]
+
+Epoch: 192/200
+
+Train Loss: 0.231, Acc: 89.4803 [6536963/7305480]
+
+Validation Loss: 0.225, Acc: 89.4615 [714332/798480]
+
+Epoch: 193/200
+
+Train Loss: 0.232, Acc: 89.4628 [6535686/7305480]
+
+Validation Loss: 0.226, Acc: 89.4088 [713911/798480]
+
+Epoch: 194/200
+
+Train Loss: 0.232, Acc: 89.4652 [6535864/7305480]
+
+Validation Loss: 0.226, Acc: 89.4303 [714083/798480]
+
+Epoch: 195/200
+
+Train Loss: 0.232, Acc: 89.4686 [6536114/7305480]
+
+Validation Loss: 0.225, Acc: 89.4020 [713857/798480]
+
+Epoch: 196/200
+
+Train Loss: 0.232, Acc: 89.4663 [6535944/7305480]
+
+Validation Loss: 0.225, Acc: 89.4473 [714219/798480]
+
+Epoch: 197/200
+
+Train Loss: 0.231, Acc: 89.4749 [6536568/7305480]
+
+Validation Loss: 0.225, Acc: 89.4303 [714083/798480]
+
+Epoch: 198/200
+
+Train Loss: 0.232, Acc: 89.4709 [6536277/7305480]
+
+Validation Loss: 0.225, Acc: 89.4513 [714251/798480]
+
+Epoch: 199/200
+
+Train Loss: 0.231, Acc: 89.4754 [6536605/7305480]
+
+Validation Loss: 0.225, Acc: 89.3965 [713813/798480]
+
+Epoch: 200/200
+
+Train Loss: 0.232, Acc: 89.4763 [6536676/7305480]
+
+Validation Loss: 0.226, Acc: 89.3818 [713696/798480]
+
+(torch_1.9_torchvision_10.0) -bash-4.2$ 
+

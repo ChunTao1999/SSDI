@@ -1,0 +1,1545 @@
+(torch_1.9_torchvision_10.0) -bash-4.2$ hostname
+cbric-gpu15.ecn.purdue.edu
+(torch_1.9_torchvision_10.0) -bash-4.2$ CUDA_VISIBLE_DEVICES="3" python AVS_train_M3_celeba_v7_extE.py 
+Warning: selected training on trainval split, hence validation is going to be performed on test split!
+Warning: selected training on trainval split, hence validation is going to be performed on test split!
+Warning: selected training on trainval split, hence validation is going to be performed on test split!
+Model M1:
+ Loaded from: ./results/celeba/trained_on_trainval_split/train_M1/vgg8_narrow_k2/pretrained_False_normalization_None_loss_correct_imbalance_False_seed_7/model.pth
+ customizable_VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (9): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (10): ReLU(inplace=True)
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): AdaptiveAvgPool2d(output_size=(2, 2))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=512, out_features=256, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=256, out_features=40, bias=True)
+  )
+)
+Model M2:
+ Loaded from: ./results/celeba/trained_on_trainval_split/train_M2/model.pth
+ context_network(
+  (conv1): Conv2d(3, 16, kernel_size=(7, 7), stride=(2, 2))
+  (bn1): EvoNormSample2d()
+  (conv2): Conv2d(16, 32, kernel_size=(5, 5), stride=(1, 1))
+  (bn2): EvoNormSample2d()
+  (conv3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+  (bn3): EvoNormSample2d()
+  (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  (bn4): EvoNormSample2d()
+  (relu): ReLU(inplace=True)
+  (avgpool): AvgPool2d(kernel_size=21, stride=1, padding=0)
+  (linear): Linear(in_features=64, out_features=2, bias=True)
+  (tanh): Tanh()
+)
+Model M3:
+
+Initialized M3 layer (features.0.weight) from M1 layer (features.0.weight)
+Initialized M3 layer (features.0.bias) from M1 layer (features.0.bias)
+Initialized M3 layer (features.3.weight) from M1 layer (features.3.weight)
+Initialized M3 layer (features.3.bias) from M1 layer (features.3.bias)
+Initialized M3 layer (features.6.weight) from M1 layer (features.6.weight)
+Initialized M3 layer (features.6.bias) from M1 layer (features.6.bias)
+Initialized M3 layer (features.9.weight) from M1 layer (features.9.weight)
+Initialized M3 layer (features.9.bias) from M1 layer (features.9.bias)
+Initialized M3 layer (features.12.weight) from M1 layer (features.12.weight)
+Initialized M3 layer (features.12.bias) from M1 layer (features.12.bias)
+Initialized M3 layer (classifier.0.weight) from M1 layer (classifier.0.weight)
+Initialized M3 layer (classifier.0.bias) from M1 layer (classifier.0.bias)
+Initialized M3 layer (classifier.3.weight) from M1 layer (classifier.3.weight)
+Initialized M3 layer (classifier.3.bias) from M1 layer (classifier.3.bias)
+Initialized M3 layer (classifier.6.weight) from M1 layer (classifier.6.weight)
+Initialized M3 layer (classifier.6.bias) from M1 layer (classifier.6.bias)
+customizable_VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (9): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (10): ReLU(inplace=True)
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): AdaptiveAvgPool2d(output_size=(2, 2))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=512, out_features=256, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=256, out_features=40, bias=True)
+  )
+  (RLfeat): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (9): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (10): ReLU(inplace=True)
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): AdaptiveAvgPool2d(output_size=(2, 2))
+  )
+  (fovea_control): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ReLU(inplace=True)
+    (4): Linear(in_features=256, out_features=5, bias=True)
+  )
+  (fovea_control_baseline): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ReLU(inplace=True)
+    (4): Linear(in_features=256, out_features=1, bias=True)
+  )
+)
+Epoch: 1/100
+
+/home/min/a/tibrayev/miniconda3/envs/torch_1.9_torchvision_10.0/lib/python3.8/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+Train Loss: 0.599 | 0.000 | 0.599
+
+Attribute Acc: 86.5697 [6324333/7305480] | GT Loc: 23.5040 [42927/182637] | Attr Loc: 20.5467 [1501035/7305480]
+.
+IoU@0.5: Average: 0.371 | TPR: 0.2350 [42927/182637]
+
+Validation Loss: 0.675 | 0.000 | 0.675
+
+Attribute Acc: 86.6242 [691677/798480] | GT Loc: 29.7465 [5938/19962] | Attr Loc: 26.0685 [208152/798480]
+.
+IoU@0.5: Average: 0.404 | TPR: 0.2975 [5938/19962]
+
+Epoch: 2/100
+
+Train Loss: 0.738 | 0.000 | 0.738
+
+Attribute Acc: 86.8062 [6341610/7305480] | GT Loc: 35.1457 [64189/182637] | Attr Loc: 30.7335 [2245231/7305480]
+.
+IoU@0.5: Average: 0.422 | TPR: 0.3515 [64189/182637]
+
+Validation Loss: 0.681 | 0.000 | 0.681
+
+Attribute Acc: 87.1814 [696126/798480] | GT Loc: 47.8810 [9558/19962] | Attr Loc: 42.0172 [335499/798480]
+.
+IoU@0.5: Average: 0.471 | TPR: 0.4788 [9558/19962]
+
+Epoch: 3/100
+
+Train Loss: 0.727 | 0.000 | 0.727
+
+Attribute Acc: 87.2364 [6373041/7305480] | GT Loc: 47.4318 [86628/182637] | Attr Loc: 41.5909 [3038414/7305480]
+.
+IoU@0.5: Average: 0.468 | TPR: 0.4743 [86628/182637]
+
+Validation Loss: 0.673 | 0.000 | 0.673
+
+Attribute Acc: 87.4757 [698476/798480] | GT Loc: 52.6550 [10511/19962] | Attr Loc: 46.3026 [369717/798480]
+.
+IoU@0.5: Average: 0.487 | TPR: 0.5266 [10511/19962]
+
+Epoch: 4/100
+
+Train Loss: 0.764 | 0.000 | 0.764
+
+Attribute Acc: 87.2931 [6377178/7305480] | GT Loc: 53.4131 [97552/182637] | Attr Loc: 46.8378 [3421729/7305480]
+.
+IoU@0.5: Average: 0.490 | TPR: 0.5341 [97552/182637]
+
+Validation Loss: 0.654 | 0.000 | 0.654
+
+Attribute Acc: 87.5363 [698960/798480] | GT Loc: 55.1398 [11007/19962] | Attr Loc: 48.5360 [387550/798480]
+.
+IoU@0.5: Average: 0.499 | TPR: 0.5514 [11007/19962]
+
+Epoch: 5/100
+
+Train Loss: 0.750 | 0.000 | 0.750
+
+Attribute Acc: 87.4457 [6388327/7305480] | GT Loc: 56.8773 [103879/182637] | Attr Loc: 49.9354 [3648024/7305480]
+.
+IoU@0.5: Average: 0.503 | TPR: 0.5688 [103879/182637]
+
+Validation Loss: 0.789 | 0.000 | 0.789
+
+Attribute Acc: 87.5145 [698786/798480] | GT Loc: 60.7354 [12124/19962] | Attr Loc: 53.4552 [426829/798480]
+.
+IoU@0.5: Average: 0.513 | TPR: 0.6074 [12124/19962]
+
+Epoch: 6/100
+
+Train Loss: 0.753 | 0.000 | 0.753
+
+Attribute Acc: 87.4925 [6391744/7305480] | GT Loc: 58.8293 [107444/182637] | Attr Loc: 51.6587 [3773916/7305480]
+.
+IoU@0.5: Average: 0.510 | TPR: 0.5883 [107444/182637]
+
+Validation Loss: 0.752 | 0.000 | 0.752
+
+Attribute Acc: 87.4244 [698066/798480] | GT Loc: 60.3046 [12038/19962] | Attr Loc: 52.9869 [423090/798480]
+.
+IoU@0.5: Average: 0.514 | TPR: 0.6030 [12038/19962]
+
+Epoch: 7/100
+
+Train Loss: 0.762 | 0.000 | 0.762
+
+Attribute Acc: 87.5000 [6392297/7305480] | GT Loc: 58.0983 [106109/182637] | Attr Loc: 51.0305 [3728026/7305480]
+.
+IoU@0.5: Average: 0.506 | TPR: 0.5810 [106109/182637]
+
+Validation Loss: 0.821 | 0.000 | 0.821
+
+Attribute Acc: 87.7257 [700472/798480] | GT Loc: 57.1686 [11412/19962] | Attr Loc: 50.4407 [402759/798480]
+.
+IoU@0.5: Average: 0.501 | TPR: 0.5717 [11412/19962]
+
+Epoch: 8/100
+
+Train Loss: 0.771 | 0.000 | 0.771
+
+Attribute Acc: 87.5137 [6393295/7305480] | GT Loc: 59.2312 [108178/182637] | Attr Loc: 52.0133 [3799824/7305480]
+.
+IoU@0.5: Average: 0.513 | TPR: 0.5923 [108178/182637]
+
+Validation Loss: 0.806 | 0.000 | 0.806
+
+Attribute Acc: 87.7213 [700437/798480] | GT Loc: 63.9014 [12756/19962] | Attr Loc: 56.2978 [449527/798480]
+.
+IoU@0.5: Average: 0.531 | TPR: 0.6390 [12756/19962]
+
+Epoch: 9/100
+
+Train Loss: 0.770 | 0.000 | 0.770
+
+Attribute Acc: 87.5570 [6396456/7305480] | GT Loc: 60.2227 [109989/182637] | Attr Loc: 52.9059 [3865033/7305480]
+.
+IoU@0.5: Average: 0.517 | TPR: 0.6022 [109989/182637]
+
+Validation Loss: 0.693 | 0.000 | 0.693
+
+Attribute Acc: 87.7517 [700680/798480] | GT Loc: 59.3728 [11852/19962] | Attr Loc: 52.3715 [418176/798480]
+.
+IoU@0.5: Average: 0.509 | TPR: 0.5937 [11852/19962]
+
+Epoch: 10/100
+
+Train Loss: 0.764 | 0.000 | 0.764
+
+Attribute Acc: 87.5711 [6397492/7305480] | GT Loc: 61.3145 [111983/182637] | Attr Loc: 53.8671 [3935247/7305480]
+.
+IoU@0.5: Average: 0.522 | TPR: 0.6131 [111983/182637]
+
+Validation Loss: 0.690 | 0.000 | 0.690
+
+Attribute Acc: 87.5505 [699073/798480] | GT Loc: 60.0441 [11986/19962] | Attr Loc: 52.8432 [421942/798480]
+.
+IoU@0.5: Average: 0.517 | TPR: 0.6004 [11986/19962]
+
+Epoch: 11/100
+
+Train Loss: 0.765 | 0.000 | 0.765
+
+Attribute Acc: 87.5946 [6399205/7305480] | GT Loc: 62.1139 [113443/182637] | Attr Loc: 54.5772 [3987125/7305480]
+.
+IoU@0.5: Average: 0.525 | TPR: 0.6211 [113443/182637]
+
+Validation Loss: 0.758 | 0.000 | 0.758
+
+Attribute Acc: 87.7756 [700871/798480] | GT Loc: 57.8599 [11550/19962] | Attr Loc: 51.0216 [407397/798480]
+.
+IoU@0.5: Average: 0.505 | TPR: 0.5786 [11550/19962]
+
+Epoch: 12/100
+
+Train Loss: 0.760 | 0.000 | 0.760
+
+Attribute Acc: 87.6053 [6399991/7305480] | GT Loc: 62.3587 [113890/182637] | Attr Loc: 54.7836 [4002202/7305480]
+.
+IoU@0.5: Average: 0.529 | TPR: 0.6236 [113890/182637]
+
+
+Message from syslogd@cbric-gpu15 at May 17 20:14:28 ...
+ kernel:do_IRQ: 62.131 No irq handler for vector (irq -1)
+Validation Loss: 0.949 | 0.000 | 0.949
+
+Attribute Acc: 87.4970 [698646/798480] | GT Loc: 68.2797 [13630/19962] | Attr Loc: 59.9838 [478959/798480]
+.
+IoU@0.5: Average: 0.557 | TPR: 0.6828 [13630/19962]
+
+Epoch: 13/100
+
+Train Loss: 0.747 | 0.000 | 0.747
+
+Attribute Acc: 87.5946 [6399206/7305480] | GT Loc: 61.9513 [113146/182637] | Attr Loc: 54.4368 [3976869/7305480]
+.
+IoU@0.5: Average: 0.526 | TPR: 0.6195 [113146/182637]
+
+Validation Loss: 0.834 | 0.000 | 0.834
+
+Attribute Acc: 87.5929 [699412/798480] | GT Loc: 68.2597 [13626/19962] | Attr Loc: 60.0321 [479344/798480]
+.
+IoU@0.5: Average: 0.557 | TPR: 0.6826 [13626/19962]
+
+Epoch: 14/100
+
+Train Loss: 0.774 | 0.000 | 0.774
+
+Attribute Acc: 87.6227 [6401259/7305480] | GT Loc: 62.3483 [113871/182637] | Attr Loc: 54.7911 [4002752/7305480]
+.
+IoU@0.5: Average: 0.528 | TPR: 0.6235 [113871/182637]
+
+Validation Loss: 0.701 | 0.000 | 0.701
+
+Attribute Acc: 87.8113 [701156/798480] | GT Loc: 62.1080 [12398/19962] | Attr Loc: 54.7667 [437301/798480]
+.
+IoU@0.5: Average: 0.525 | TPR: 0.6211 [12398/19962]
+
+Epoch: 15/100
+
+Train Loss: 0.745 | 0.000 | 0.745
+
+Attribute Acc: 87.6600 [6403985/7305480] | GT Loc: 60.5261 [110543/182637] | Attr Loc: 53.2296 [3888676/7305480]
+.
+IoU@0.5: Average: 0.518 | TPR: 0.6053 [110543/182637]
+
+Validation Loss: 0.735 | 0.000 | 0.735
+
+Attribute Acc: 87.7566 [700719/798480] | GT Loc: 65.4544 [13066/19962] | Attr Loc: 57.7094 [460798/798480]
+.
+IoU@0.5: Average: 0.542 | TPR: 0.6545 [13066/19962]
+
+Epoch: 16/100
+
+Train Loss: 0.767 | 0.000 | 0.767
+
+Attribute Acc: 87.6620 [6404127/7305480] | GT Loc: 59.8920 [109385/182637] | Attr Loc: 52.6624 [3847239/7305480]
+.
+IoU@0.5: Average: 0.516 | TPR: 0.5989 [109385/182637]
+
+Validation Loss: 0.770 | 0.000 | 0.770
+
+Attribute Acc: 87.7656 [700791/798480] | GT Loc: 64.9484 [12965/19962] | Attr Loc: 57.2286 [456959/798480]
+.
+IoU@0.5: Average: 0.538 | TPR: 0.6495 [12965/19962]
+
+Epoch: 17/100
+
+Train Loss: 0.751 | 0.000 | 0.751
+
+Attribute Acc: 87.6745 [6405044/7305480] | GT Loc: 61.6458 [112588/182637] | Attr Loc: 54.2060 [3960012/7305480]
+.
+IoU@0.5: Average: 0.523 | TPR: 0.6165 [112588/182637]
+
+Validation Loss: 0.803 | 0.000 | 0.803
+
+Attribute Acc: 87.5079 [698733/798480] | GT Loc: 69.4369 [13861/19962] | Attr Loc: 60.9447 [486631/798480]
+.
+IoU@0.5: Average: 0.570 | TPR: 0.6944 [13861/19962]
+
+Epoch: 18/100
+
+Train Loss: 0.756 | 0.000 | 0.756
+
+Attribute Acc: 87.6143 [6400643/7305480] | GT Loc: 63.7817 [116489/182637] | Attr Loc: 56.0444 [4094315/7305480]
+.
+IoU@0.5: Average: 0.535 | TPR: 0.6378 [116489/182637]
+
+Validation Loss: 0.759 | 0.000 | 0.759
+
+Attribute Acc: 87.8305 [701309/798480] | GT Loc: 60.8606 [12149/19962] | Attr Loc: 53.6876 [428685/798480]
+.
+IoU@0.5: Average: 0.514 | TPR: 0.6086 [12149/19962]
+
+Epoch: 19/100
+
+Train Loss: 0.764 | 0.000 | 0.764
+
+Attribute Acc: 87.6420 [6402666/7305480] | GT Loc: 62.0258 [113282/182637] | Attr Loc: 54.5158 [3982643/7305480]
+.
+IoU@0.5: Average: 0.524 | TPR: 0.6203 [113282/182637]
+
+Validation Loss: 0.787 | 0.000 | 0.787
+
+Attribute Acc: 87.7894 [700981/798480] | GT Loc: 67.4732 [13469/19962] | Attr Loc: 59.4636 [474805/798480]
+.
+IoU@0.5: Average: 0.546 | TPR: 0.6747 [13469/19962]
+
+Epoch: 20/100
+
+Train Loss: 0.783 | 0.000 | 0.783
+
+Attribute Acc: 87.6627 [6404184/7305480] | GT Loc: 64.2367 [117320/182637] | Attr Loc: 56.4716 [4125518/7305480]
+.
+IoU@0.5: Average: 0.534 | TPR: 0.6424 [117320/182637]
+
+Validation Loss: 0.793 | 0.000 | 0.793
+
+Attribute Acc: 87.8008 [701072/798480] | GT Loc: 64.2120 [12818/19962] | Attr Loc: 56.6207 [452105/798480]
+.
+IoU@0.5: Average: 0.525 | TPR: 0.6421 [12818/19962]
+
+Epoch: 21/100
+
+Train Loss: 0.763 | 0.000 | 0.763
+
+Attribute Acc: 87.6323 [6401961/7305480] | GT Loc: 62.7578 [114619/182637] | Attr Loc: 55.1487 [4028876/7305480]
+.
+IoU@0.5: Average: 0.531 | TPR: 0.6276 [114619/182637]
+
+Validation Loss: 0.740 | 0.000 | 0.740
+
+Attribute Acc: 87.5594 [699144/798480] | GT Loc: 55.9513 [11169/19962] | Attr Loc: 49.2386 [393160/798480]
+.
+IoU@0.5: Average: 0.498 | TPR: 0.5595 [11169/19962]
+
+Epoch: 22/100
+
+Train Loss: 0.760 | 0.000 | 0.760
+
+Attribute Acc: 87.6609 [6404046/7305480] | GT Loc: 62.5087 [114164/182637] | Attr Loc: 54.9507 [4014414/7305480]
+.
+IoU@0.5: Average: 0.528 | TPR: 0.6251 [114164/182637]
+
+Validation Loss: 0.789 | 0.000 | 0.789
+
+Attribute Acc: 87.8011 [701074/798480] | GT Loc: 66.5064 [13276/19962] | Attr Loc: 58.5942 [467863/798480]
+.
+IoU@0.5: Average: 0.542 | TPR: 0.6651 [13276/19962]
+
+Epoch: 23/100
+
+Train Loss: 0.759 | 0.000 | 0.759
+
+Attribute Acc: 87.6821 [6405596/7305480] | GT Loc: 64.5247 [117846/182637] | Attr Loc: 56.7194 [4143628/7305480]
+.
+IoU@0.5: Average: 0.537 | TPR: 0.6452 [117846/182637]
+
+Validation Loss: 0.852 | 0.000 | 0.852
+
+Attribute Acc: 87.4348 [698149/798480] | GT Loc: 67.2979 [13434/19962] | Attr Loc: 59.0674 [471641/798480]
+.
+IoU@0.5: Average: 0.548 | TPR: 0.6730 [13434/19962]
+
+Epoch: 24/100
+
+Train Loss: 0.762 | 0.000 | 0.762
+
+Attribute Acc: 87.6377 [6402357/7305480] | GT Loc: 66.0961 [120716/182637] | Attr Loc: 58.0742 [4242601/7305480]
+.
+IoU@0.5: Average: 0.547 | TPR: 0.6610 [120716/182637]
+
+Validation Loss: 0.857 | 0.000 | 0.857
+
+Attribute Acc: 87.7834 [700933/798480] | GT Loc: 67.9892 [13572/19962] | Attr Loc: 59.9073 [478348/798480]
+.
+IoU@0.5: Average: 0.548 | TPR: 0.6799 [13572/19962]
+
+Epoch: 25/100
+
+Train Loss: 0.772 | 0.000 | 0.772
+
+Attribute Acc: 87.6763 [6405176/7305480] | GT Loc: 63.8146 [116549/182637] | Attr Loc: 56.1053 [4098763/7305480]
+.
+IoU@0.5: Average: 0.532 | TPR: 0.6381 [116549/182637]
+
+Validation Loss: 0.638 | 0.000 | 0.638
+
+Attribute Acc: 87.8535 [701493/798480] | GT Loc: 59.7135 [11920/19962] | Attr Loc: 52.6845 [420675/798480]
+.
+IoU@0.5: Average: 0.509 | TPR: 0.5971 [11920/19962]
+
+Epoch: 26/100
+
+Train Loss: 0.749 | 0.000 | 0.749
+
+Attribute Acc: 87.6666 [6404465/7305480] | GT Loc: 65.3942 [119434/182637] | Attr Loc: 57.4619 [4197869/7305480]
+.
+IoU@0.5: Average: 0.543 | TPR: 0.6539 [119434/182637]
+
+Validation Loss: 0.709 | 0.000 | 0.709
+
+Attribute Acc: 87.8400 [701385/798480] | GT Loc: 62.6340 [12503/19962] | Attr Loc: 55.2367 [441054/798480]
+.
+IoU@0.5: Average: 0.532 | TPR: 0.6263 [12503/19962]
+
+Epoch: 27/100
+
+
+Message from syslogd@cbric-gpu15 at May 18 01:57:13 ...
+ kernel:do_IRQ: 7.68 No irq handler for vector (irq -1)
+Train Loss: 0.767 | 0.000 | 0.767
+
+Attribute Acc: 87.5908 [6398929/7305480] | GT Loc: 65.7276 [120043/182637] | Attr Loc: 57.7075 [4215807/7305480]
+.
+IoU@0.5: Average: 0.546 | TPR: 0.6573 [120043/182637]
+
+Validation Loss: 0.630 | 0.000 | 0.630
+
+Attribute Acc: 87.5427 [699011/798480] | GT Loc: 62.4286 [12462/19962] | Attr Loc: 54.8949 [438325/798480]
+.
+IoU@0.5: Average: 0.541 | TPR: 0.6243 [12462/19962]
+
+Epoch: 28/100
+
+Train Loss: 0.750 | 0.000 | 0.750
+
+Attribute Acc: 87.6516 [6403368/7305480] | GT Loc: 65.6614 [119922/182637] | Attr Loc: 57.6955 [4214932/7305480]
+.
+IoU@0.5: Average: 0.544 | TPR: 0.6566 [119922/182637]
+
+Validation Loss: 0.589 | 0.000 | 0.589
+
+Attribute Acc: 87.6467 [699841/798480] | GT Loc: 57.2588 [11430/19962] | Attr Loc: 50.4001 [402435/798480]
+.
+IoU@0.5: Average: 0.510 | TPR: 0.5726 [11430/19962]
+
+Epoch: 29/100
+
+Train Loss: 0.769 | 0.000 | 0.769
+
+Attribute Acc: 87.6248 [6401413/7305480] | GT Loc: 61.4251 [112185/182637] | Attr Loc: 53.9863 [3943959/7305480]
+.
+IoU@0.5: Average: 0.521 | TPR: 0.6143 [112185/182637]
+
+Validation Loss: 0.982 | 0.000 | 0.982
+
+Attribute Acc: 87.6826 [700128/798480] | GT Loc: 70.1333 [14000/19962] | Attr Loc: 61.7264 [492873/798480]
+.
+IoU@0.5: Average: 0.557 | TPR: 0.7013 [14000/19962]
+
+Epoch: 30/100
+
+Train Loss: 0.768 | 0.000 | 0.768
+
+Attribute Acc: 87.6629 [6404195/7305480] | GT Loc: 64.0407 [116962/182637] | Attr Loc: 56.2979 [4112829/7305480]
+.
+IoU@0.5: Average: 0.536 | TPR: 0.6404 [116962/182637]
+
+Validation Loss: 0.821 | 0.000 | 0.821
+
+Attribute Acc: 87.7546 [700703/798480] | GT Loc: 65.0336 [12982/19962] | Attr Loc: 57.2622 [457227/798480]
+.
+IoU@0.5: Average: 0.538 | TPR: 0.6503 [12982/19962]
+
+Epoch: 31/100
+
+Train Loss: 0.753 | 0.000 | 0.753
+
+Attribute Acc: 87.6655 [6404388/7305480] | GT Loc: 63.6651 [116276/182637] | Attr Loc: 55.9522 [4087574/7305480]
+.
+IoU@0.5: Average: 0.534 | TPR: 0.6367 [116276/182637]
+
+Validation Loss: 0.830 | 0.000 | 0.830
+
+Attribute Acc: 87.7696 [700823/798480] | GT Loc: 67.8389 [13542/19962] | Attr Loc: 59.7714 [477263/798480]
+.
+IoU@0.5: Average: 0.547 | TPR: 0.6784 [13542/19962]
+
+Epoch: 32/100
+
+Train Loss: 0.765 | 0.000 | 0.765
+
+Attribute Acc: 87.6711 [6404796/7305480] | GT Loc: 63.7609 [116451/182637] | Attr Loc: 56.0608 [4095510/7305480]
+.
+IoU@0.5: Average: 0.529 | TPR: 0.6376 [116451/182637]
+
+Validation Loss: 0.844 | 0.000 | 0.844
+
+Attribute Acc: 87.3897 [697789/798480] | GT Loc: 69.2766 [13829/19962] | Attr Loc: 60.7146 [484794/798480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.6928 [13829/19962]
+
+Epoch: 33/100
+
+Train Loss: 0.755 | 0.000 | 0.755
+
+Attribute Acc: 87.6138 [6400605/7305480] | GT Loc: 66.6749 [121773/182637] | Attr Loc: 58.5615 [4278199/7305480]
+.
+IoU@0.5: Average: 0.554 | TPR: 0.6667 [121773/182637]
+
+Validation Loss: 0.762 | 0.000 | 0.762
+
+Attribute Acc: 87.7688 [700816/798480] | GT Loc: 67.0825 [13391/19962] | Attr Loc: 59.1202 [472063/798480]
+.
+IoU@0.5: Average: 0.548 | TPR: 0.6708 [13391/19962]
+
+Epoch: 34/100
+
+Train Loss: 0.769 | 0.000 | 0.769
+
+Attribute Acc: 87.6566 [6403734/7305480] | GT Loc: 66.4181 [121304/182637] | Attr Loc: 58.3676 [4264035/7305480]
+.
+IoU@0.5: Average: 0.545 | TPR: 0.6642 [121304/182637]
+
+Validation Loss: 0.913 | 0.000 | 0.913
+
+Attribute Acc: 87.6175 [699608/798480] | GT Loc: 72.6881 [14510/19962] | Attr Loc: 63.9034 [510256/798480]
+.
+IoU@0.5: Average: 0.576 | TPR: 0.7269 [14510/19962]
+
+Epoch: 35/100
+
+Train Loss: 0.773 | 0.000 | 0.773
+
+Attribute Acc: 87.6196 [6401031/7305480] | GT Loc: 66.2347 [120969/182637] | Attr Loc: 58.1817 [4250451/7305480]
+.
+IoU@0.5: Average: 0.546 | TPR: 0.6623 [120969/182637]
+
+Validation Loss: 0.942 | 0.000 | 0.942
+
+Attribute Acc: 87.6751 [700068/798480] | GT Loc: 72.0669 [14386/19962] | Attr Loc: 63.3998 [506235/798480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.7207 [14386/19962]
+
+Epoch: 36/100
+
+Train Loss: 0.772 | 0.000 | 0.772
+
+Attribute Acc: 87.7094 [6407593/7305480] | GT Loc: 64.6944 [118156/182637] | Attr Loc: 56.8988 [4156729/7305480]
+.
+IoU@0.5: Average: 0.533 | TPR: 0.6469 [118156/182637]
+
+Validation Loss: 0.746 | 0.000 | 0.746
+
+Attribute Acc: 87.4931 [698615/798480] | GT Loc: 53.1109 [10602/19962] | Attr Loc: 46.7532 [373315/798480]
+.
+IoU@0.5: Average: 0.489 | TPR: 0.5311 [10602/19962]
+
+Epoch: 37/100
+
+Train Loss: 0.770 | 0.000 | 0.770
+
+Attribute Acc: 87.7078 [6407474/7305480] | GT Loc: 61.2959 [111949/182637] | Attr Loc: 53.9007 [3937702/7305480]
+.
+IoU@0.5: Average: 0.521 | TPR: 0.6130 [111949/182637]
+
+Validation Loss: 0.812 | 0.000 | 0.812
+
+Attribute Acc: 87.8107 [701151/798480] | GT Loc: 68.7256 [13719/19962] | Attr Loc: 60.5711 [483648/798480]
+.
+IoU@0.5: Average: 0.551 | TPR: 0.6873 [13719/19962]
+
+Epoch: 38/100
+
+Train Loss: 0.782 | 0.000 | 0.782
+
+Attribute Acc: 87.6899 [6406169/7305480] | GT Loc: 66.7132 [121843/182637] | Attr Loc: 58.6444 [4284255/7305480]
+.
+IoU@0.5: Average: 0.546 | TPR: 0.6671 [121843/182637]
+
+Validation Loss: 0.856 | 0.000 | 0.856
+
+Attribute Acc: 87.8156 [701190/798480] | GT Loc: 72.6931 [14511/19962] | Attr Loc: 64.0179 [511170/798480]
+.
+IoU@0.5: Average: 0.579 | TPR: 0.7269 [14511/19962]
+
+Epoch: 39/100
+
+Train Loss: 0.761 | 0.000 | 0.761
+
+Attribute Acc: 87.6859 [6405876/7305480] | GT Loc: 65.9445 [120439/182637] | Attr Loc: 57.9747 [4235332/7305480]
+.
+IoU@0.5: Average: 0.541 | TPR: 0.6594 [120439/182637]
+
+Validation Loss: 0.802 | 0.000 | 0.802
+
+Attribute Acc: 87.7377 [700568/798480] | GT Loc: 68.8859 [13751/19962] | Attr Loc: 60.6570 [484334/798480]
+.
+IoU@0.5: Average: 0.557 | TPR: 0.6889 [13751/19962]
+
+Epoch: 40/100
+
+Train Loss: 0.747 | 0.000 | 0.747
+
+Attribute Acc: 87.6689 [6404636/7305480] | GT Loc: 65.4774 [119586/182637] | Attr Loc: 57.5429 [4203786/7305480]
+.
+IoU@0.5: Average: 0.544 | TPR: 0.6548 [119586/182637]
+
+Validation Loss: 0.726 | 0.000 | 0.726
+
+Attribute Acc: 87.8374 [701364/798480] | GT Loc: 65.9503 [13165/19962] | Attr Loc: 58.1477 [464298/798480]
+.
+IoU@0.5: Average: 0.549 | TPR: 0.6595 [13165/19962]
+
+Epoch: 41/100
+
+Train Loss: 0.765 | 0.000 | 0.765
+
+Attribute Acc: 87.7318 [6409231/7305480] | GT Loc: 65.4807 [119592/182637] | Attr Loc: 57.5928 [4207430/7305480]
+.
+IoU@0.5: Average: 0.536 | TPR: 0.6548 [119592/182637]
+
+Validation Loss: 0.932 | 0.000 | 0.932
+
+Attribute Acc: 87.3852 [697753/798480] | GT Loc: 71.4007 [14253/19962] | Attr Loc: 62.6085 [499916/798480]
+.
+IoU@0.5: Average: 0.579 | TPR: 0.7140 [14253/19962]
+
+Epoch: 42/100
+
+Train Loss: 0.765 | 0.000 | 0.765
+
+Attribute Acc: 87.6482 [6403119/7305480] | GT Loc: 65.5245 [119672/182637] | Attr Loc: 57.5785 [4206383/7305480]
+.
+IoU@0.5: Average: 0.541 | TPR: 0.6552 [119672/182637]
+
+Validation Loss: 0.712 | 0.000 | 0.712
+
+Attribute Acc: 87.8065 [701117/798480] | GT Loc: 61.9377 [12364/19962] | Attr Loc: 54.6218 [436144/798480]
+.
+IoU@0.5: Average: 0.517 | TPR: 0.6194 [12364/19962]
+
+Epoch: 43/100
+
+Train Loss: 0.761 | 0.000 | 0.761
+
+Attribute Acc: 87.6481 [6403114/7305480] | GT Loc: 65.4802 [119591/182637] | Attr Loc: 57.5448 [4203923/7305480]
+.
+IoU@0.5: Average: 0.539 | TPR: 0.6548 [119591/182637]
+
+Validation Loss: 0.742 | 0.000 | 0.742
+
+Attribute Acc: 87.4907 [698596/798480] | GT Loc: 65.3341 [13042/19962] | Attr Loc: 57.3615 [458020/798480]
+.
+IoU@0.5: Average: 0.551 | TPR: 0.6533 [13042/19962]
+
+Epoch: 44/100
+
+Train Loss: 0.750 | 0.000 | 0.750
+
+Attribute Acc: 87.7093 [6407589/7305480] | GT Loc: 64.7131 [118190/182637] | Attr Loc: 56.9032 [4157055/7305480]
+.
+IoU@0.5: Average: 0.534 | TPR: 0.6471 [118190/182637]
+
+Validation Loss: 0.690 | 0.000 | 0.690
+
+Attribute Acc: 87.8780 [701688/798480] | GT Loc: 61.5069 [12278/19962] | Attr Loc: 54.2680 [433319/798480]
+.
+IoU@0.5: Average: 0.520 | TPR: 0.6151 [12278/19962]
+
+Epoch: 45/100
+
+Train Loss: 0.779 | 0.000 | 0.779
+
+Attribute Acc: 87.6820 [6405594/7305480] | GT Loc: 64.6079 [117998/182637] | Attr Loc: 56.8072 [4150040/7305480]
+.
+IoU@0.5: Average: 0.533 | TPR: 0.6461 [117998/182637]
+
+Validation Loss: 0.878 | 0.000 | 0.878
+
+Attribute Acc: 87.7715 [700838/798480] | GT Loc: 67.0223 [13379/19962] | Attr Loc: 59.0875 [471802/798480]
+.
+IoU@0.5: Average: 0.535 | TPR: 0.6702 [13379/19962]
+
+Epoch: 46/100
+
+Train Loss: 0.774 | 0.000 | 0.774
+
+Attribute Acc: 87.7211 [6408445/7305480] | GT Loc: 66.1257 [120770/182637] | Attr Loc: 58.1514 [4248242/7305480]
+.
+IoU@0.5: Average: 0.543 | TPR: 0.6613 [120770/182637]
+
+Validation Loss: 0.880 | 0.000 | 0.880
+
+Attribute Acc: 87.6962 [700237/798480] | GT Loc: 66.2459 [13224/19962] | Attr Loc: 58.3790 [466145/798480]
+.
+IoU@0.5: Average: 0.527 | TPR: 0.6625 [13224/19962]
+
+Epoch: 47/100
+
+Train Loss: 0.784 | 0.000 | 0.784
+
+Attribute Acc: 87.6296 [6401764/7305480] | GT Loc: 68.6312 [125346/182637] | Attr Loc: 60.2893 [4404425/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.6863 [125346/182637]
+
+Validation Loss: 0.970 | 0.000 | 0.970
+
+Attribute Acc: 87.6479 [699851/798480] | GT Loc: 73.5097 [14674/19962] | Attr Loc: 64.6204 [515981/798480]
+.
+IoU@0.5: Average: 0.584 | TPR: 0.7351 [14674/19962]
+
+Epoch: 48/100
+
+Train Loss: 0.786 | 0.000 | 0.786
+
+Attribute Acc: 87.6472 [6403048/7305480] | GT Loc: 68.5004 [125107/182637] | Attr Loc: 60.1892 [4397111/7305480]
+.
+IoU@0.5: Average: 0.557 | TPR: 0.6850 [125107/182637]
+
+Validation Loss: 0.908 | 0.000 | 0.908
+
+Attribute Acc: 87.6205 [699632/798480] | GT Loc: 73.3494 [14642/19962] | Attr Loc: 64.4576 [514681/798480]
+.
+IoU@0.5: Average: 0.591 | TPR: 0.7335 [14642/19962]
+
+Epoch: 49/100
+
+Train Loss: 0.761 | 0.000 | 0.761
+
+Attribute Acc: 87.6355 [6402194/7305480] | GT Loc: 66.8901 [122166/182637] | Attr Loc: 58.7510 [4292046/7305480]
+.
+IoU@0.5: Average: 0.553 | TPR: 0.6689 [122166/182637]
+
+Validation Loss: 0.798 | 0.000 | 0.798
+
+Attribute Acc: 87.6702 [700029/798480] | GT Loc: 69.7826 [13930/19962] | Attr Loc: 61.3459 [489835/798480]
+.
+IoU@0.5: Average: 0.579 | TPR: 0.6978 [13930/19962]
+
+Epoch: 50/100
+
+Train Loss: 0.761 | 0.000 | 0.761
+
+Attribute Acc: 87.6389 [6402445/7305480] | GT Loc: 66.8758 [122140/182637] | Attr Loc: 58.7418 [4291371/7305480]
+.
+IoU@0.5: Average: 0.551 | TPR: 0.6688 [122140/182637]
+
+Validation Loss: 0.904 | 0.000 | 0.904
+
+Attribute Acc: 87.8255 [701269/798480] | GT Loc: 70.1232 [13998/19962] | Attr Loc: 61.7838 [493331/798480]
+.
+IoU@0.5: Average: 0.548 | TPR: 0.7012 [13998/19962]
+
+Epoch: 51/100
+
+Train Loss: 0.770 | 0.000 | 0.770
+
+Attribute Acc: 87.8010 [6414281/7305480] | GT Loc: 68.4204 [124961/182637] | Attr Loc: 60.1874 [4396982/7305480]
+.
+IoU@0.5: Average: 0.547 | TPR: 0.6842 [124961/182637]
+
+Validation Loss: 0.893 | 0.000 | 0.893
+
+Attribute Acc: 87.8210 [701233/798480] | GT Loc: 73.1139 [14595/19962] | Attr Loc: 64.3697 [513979/798480]
+.
+IoU@0.5: Average: 0.571 | TPR: 0.7311 [14595/19962]
+
+Epoch: 52/100
+
+Train Loss: 0.801 | 0.000 | 0.801
+
+Attribute Acc: 87.7788 [6412664/7305480] | GT Loc: 71.4308 [130459/182637] | Attr Loc: 62.8074 [4588380/7305480]
+.
+IoU@0.5: Average: 0.567 | TPR: 0.7143 [130459/182637]
+
+Validation Loss: 0.866 | 0.000 | 0.866
+
+Attribute Acc: 87.7991 [701058/798480] | GT Loc: 73.4796 [14668/19962] | Attr Loc: 64.6799 [516456/798480]
+.
+IoU@0.5: Average: 0.583 | TPR: 0.7348 [14668/19962]
+
+Epoch: 53/100
+
+Train Loss: 0.783 | 0.000 | 0.783
+
+Attribute Acc: 87.7486 [6410456/7305480] | GT Loc: 70.9418 [129566/182637] | Attr Loc: 62.3548 [4555317/7305480]
+.
+IoU@0.5: Average: 0.568 | TPR: 0.7094 [129566/182637]
+
+Validation Loss: 0.835 | 0.000 | 0.835
+
+Attribute Acc: 87.8293 [701299/798480] | GT Loc: 71.6261 [14298/19962] | Attr Loc: 63.0836 [503710/798480]
+.
+IoU@0.5: Average: 0.568 | TPR: 0.7163 [14298/19962]
+
+Epoch: 54/100
+
+Train Loss: 0.767 | 0.000 | 0.767
+
+Attribute Acc: 87.7785 [6412639/7305480] | GT Loc: 70.4928 [128746/182637] | Attr Loc: 61.9928 [4528874/7305480]
+.
+IoU@0.5: Average: 0.566 | TPR: 0.7049 [128746/182637]
+
+Validation Loss: 0.755 | 0.000 | 0.755
+
+Attribute Acc: 87.8036 [701094/798480] | GT Loc: 69.5872 [13891/19962] | Attr Loc: 61.2817 [489322/798480]
+.
+IoU@0.5: Average: 0.568 | TPR: 0.6959 [13891/19962]
+
+Epoch: 55/100
+
+Train Loss: 0.779 | 0.000 | 0.779
+
+Attribute Acc: 87.7054 [6407298/7305480] | GT Loc: 71.1455 [129938/182637] | Attr Loc: 62.5033 [4566165/7305480]
+.
+IoU@0.5: Average: 0.578 | TPR: 0.7115 [129938/182637]
+
+Validation Loss: 0.778 | 0.000 | 0.778
+
+Attribute Acc: 87.7192 [700420/798480] | GT Loc: 70.5741 [14088/19962] | Attr Loc: 62.1071 [495913/798480]
+.
+IoU@0.5: Average: 0.579 | TPR: 0.7057 [14088/19962]
+
+Epoch: 56/100
+
+Train Loss: 0.776 | 0.000 | 0.776
+
+Attribute Acc: 87.7246 [6408702/7305480] | GT Loc: 70.9790 [129634/182637] | Attr Loc: 62.3692 [4556366/7305480]
+.
+IoU@0.5: Average: 0.576 | TPR: 0.7098 [129634/182637]
+
+Validation Loss: 0.903 | 0.000 | 0.903
+
+Attribute Acc: 87.8018 [701080/798480] | GT Loc: 73.3894 [14650/19962] | Attr Loc: 64.6089 [515889/798480]
+.
+IoU@0.5: Average: 0.582 | TPR: 0.7339 [14650/19962]
+
+Epoch: 57/100
+
+Train Loss: 0.785 | 0.000 | 0.785
+
+Attribute Acc: 87.8202 [6415684/7305480] | GT Loc: 70.3746 [128530/182637] | Attr Loc: 61.8954 [4521757/7305480]
+.
+IoU@0.5: Average: 0.564 | TPR: 0.7037 [128530/182637]
+
+Validation Loss: 0.896 | 0.000 | 0.896
+
+Attribute Acc: 87.8430 [701409/798480] | GT Loc: 72.0469 [14382/19962] | Attr Loc: 63.4612 [506725/798480]
+.
+IoU@0.5: Average: 0.565 | TPR: 0.7205 [14382/19962]
+
+Epoch: 58/100
+
+Train Loss: 0.783 | 0.000 | 0.783
+
+Attribute Acc: 87.8409 [6417198/7305480] | GT Loc: 70.0165 [127876/182637] | Attr Loc: 61.6095 [4500867/7305480]
+.
+IoU@0.5: Average: 0.558 | TPR: 0.7002 [127876/182637]
+
+Validation Loss: 0.862 | 0.000 | 0.862
+
+Attribute Acc: 87.8707 [701630/798480] | GT Loc: 71.6361 [14300/19962] | Attr Loc: 63.1108 [503927/798480]
+.
+IoU@0.5: Average: 0.564 | TPR: 0.7164 [14300/19962]
+
+Epoch: 59/100
+
+Train Loss: 0.792 | 0.000 | 0.792
+
+Attribute Acc: 87.7686 [6411916/7305480] | GT Loc: 70.7409 [129199/182637] | Attr Loc: 62.1955 [4543679/7305480]
+.
+IoU@0.5: Average: 0.567 | TPR: 0.7074 [129199/182637]
+
+Validation Loss: 0.922 | 0.000 | 0.922
+
+Attribute Acc: 87.6941 [700220/798480] | GT Loc: 74.4364 [14859/19962] | Attr Loc: 65.4278 [522428/798480]
+.
+IoU@0.5: Average: 0.593 | TPR: 0.7444 [14859/19962]
+
+Epoch: 60/100
+
+Train Loss: 0.778 | 0.000 | 0.778
+
+Attribute Acc: 87.7719 [6412159/7305480] | GT Loc: 70.0893 [128009/182637] | Attr Loc: 61.6196 [4501604/7305480]
+.
+IoU@0.5: Average: 0.565 | TPR: 0.7009 [128009/182637]
+
+Validation Loss: 0.850 | 0.000 | 0.850
+
+Attribute Acc: 87.8093 [701140/798480] | GT Loc: 71.7513 [14323/19962] | Attr Loc: 63.1718 [504414/798480]
+.
+IoU@0.5: Average: 0.571 | TPR: 0.7175 [14323/19962]
+
+Epoch: 61/100
+
+Train Loss: 0.780 | 0.000 | 0.780
+
+Attribute Acc: 87.7367 [6409587/7305480] | GT Loc: 70.4457 [128660/182637] | Attr Loc: 61.9062 [4522548/7305480]
+.
+IoU@0.5: Average: 0.573 | TPR: 0.7045 [128660/182637]
+
+Validation Loss: 0.911 | 0.000 | 0.911
+
+Attribute Acc: 87.7276 [700487/798480] | GT Loc: 73.9505 [14762/19962] | Attr Loc: 65.0279 [519235/798480]
+.
+IoU@0.5: Average: 0.592 | TPR: 0.7395 [14762/19962]
+
+Epoch: 62/100
+
+Train Loss: 0.781 | 0.000 | 0.781
+
+Attribute Acc: 87.7802 [6412766/7305480] | GT Loc: 70.5969 [128936/182637] | Attr Loc: 62.0741 [4534814/7305480]
+.
+IoU@0.5: Average: 0.573 | TPR: 0.7060 [128936/182637]
+
+Validation Loss: 0.761 | 0.000 | 0.761
+
+Attribute Acc: 87.7963 [701036/798480] | GT Loc: 69.0061 [13775/19962] | Attr Loc: 60.7536 [485105/798480]
+.
+IoU@0.5: Average: 0.567 | TPR: 0.6901 [13775/19962]
+
+Epoch: 63/100
+
+Train Loss: 0.759 | 0.000 | 0.759
+
+Attribute Acc: 87.8016 [6414330/7305480] | GT Loc: 69.4180 [126783/182637] | Attr Loc: 61.0398 [4459249/7305480]
+.
+IoU@0.5: Average: 0.565 | TPR: 0.6942 [126783/182637]
+
+Validation Loss: 0.874 | 0.000 | 0.874
+
+Attribute Acc: 87.7852 [700947/798480] | GT Loc: 72.7382 [14520/19962] | Attr Loc: 64.0263 [511237/798480]
+.
+IoU@0.5: Average: 0.584 | TPR: 0.7274 [14520/19962]
+
+Epoch: 64/100
+
+Train Loss: 0.769 | 0.000 | 0.769
+
+Attribute Acc: 87.7431 [6410055/7305480] | GT Loc: 70.0362 [127912/182637] | Attr Loc: 61.5490 [4496453/7305480]
+.
+IoU@0.5: Average: 0.573 | TPR: 0.7004 [127912/182637]
+
+Validation Loss: 0.868 | 0.000 | 0.868
+
+Attribute Acc: 87.7650 [700786/798480] | GT Loc: 72.0218 [14377/19962] | Attr Loc: 63.3708 [506003/798480]
+.
+IoU@0.5: Average: 0.576 | TPR: 0.7202 [14377/19962]
+
+Epoch: 65/100
+
+Train Loss: 0.794 | 0.000 | 0.794
+
+Attribute Acc: 87.7965 [6413957/7305480] | GT Loc: 70.1594 [128137/182637] | Attr Loc: 61.7008 [4507539/7305480]
+.
+IoU@0.5: Average: 0.564 | TPR: 0.7016 [128137/182637]
+
+Validation Loss: 0.824 | 0.000 | 0.824
+
+Attribute Acc: 87.8586 [701533/798480] | GT Loc: 70.3737 [14048/19962] | Attr Loc: 61.9893 [494972/798480]
+.
+IoU@0.5: Average: 0.562 | TPR: 0.7037 [14048/19962]
+
+Epoch: 66/100
+
+Train Loss: 0.768 | 0.000 | 0.768
+
+Attribute Acc: 87.8268 [6416168/7305480] | GT Loc: 68.3295 [124795/182637] | Attr Loc: 60.1099 [4391318/7305480]
+.
+IoU@0.5: Average: 0.552 | TPR: 0.6833 [124795/182637]
+
+Validation Loss: 0.801 | 0.000 | 0.801
+
+Attribute Acc: 87.8568 [701519/798480] | GT Loc: 69.8577 [13945/19962] | Attr Loc: 61.5393 [491379/798480]
+.
+IoU@0.5: Average: 0.562 | TPR: 0.6986 [13945/19962]
+
+Epoch: 67/100
+
+Train Loss: 0.772 | 0.000 | 0.772
+
+Attribute Acc: 87.8365 [6416879/7305480] | GT Loc: 69.4011 [126752/182637] | Attr Loc: 61.0609 [4460793/7305480]
+.
+IoU@0.5: Average: 0.558 | TPR: 0.6940 [126752/182637]
+
+Validation Loss: 0.799 | 0.000 | 0.799
+
+Attribute Acc: 87.8582 [701530/798480] | GT Loc: 70.0381 [13981/19962] | Attr Loc: 61.7042 [492696/798480]
+.
+IoU@0.5: Average: 0.564 | TPR: 0.7004 [13981/19962]
+
+Epoch: 68/100
+
+Train Loss: 0.763 | 0.000 | 0.763
+
+Attribute Acc: 87.8214 [6415772/7305480] | GT Loc: 69.2800 [126531/182637] | Attr Loc: 60.9450 [4452322/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.6928 [126531/182637]
+
+Validation Loss: 0.917 | 0.000 | 0.917
+
+Attribute Acc: 87.8350 [701345/798480] | GT Loc: 71.3856 [14250/19962] | Attr Loc: 62.8876 [502145/798480]
+.
+IoU@0.5: Average: 0.563 | TPR: 0.7139 [14250/19962]
+
+Epoch: 69/100
+
+Train Loss: 0.783 | 0.000 | 0.783
+
+Attribute Acc: 87.8446 [6417471/7305480] | GT Loc: 68.6372 [125357/182637] | Attr Loc: 60.3977 [4412339/7305480]
+.
+IoU@0.5: Average: 0.550 | TPR: 0.6864 [125357/182637]
+
+Validation Loss: 0.809 | 0.000 | 0.809
+
+Attribute Acc: 87.8991 [701857/798480] | GT Loc: 69.5421 [13882/19962] | Attr Loc: 61.3026 [489489/798480]
+.
+IoU@0.5: Average: 0.555 | TPR: 0.6954 [13882/19962]
+
+Epoch: 70/100
+
+Train Loss: 0.785 | 0.000 | 0.785
+
+Attribute Acc: 87.8108 [6414997/7305480] | GT Loc: 70.0603 [127956/182637] | Attr Loc: 61.6260 [4502072/7305480]
+.
+IoU@0.5: Average: 0.562 | TPR: 0.7006 [127956/182637]
+
+Validation Loss: 0.838 | 0.000 | 0.838
+
+Attribute Acc: 87.8353 [701347/798480] | GT Loc: 71.1602 [14205/19962] | Attr Loc: 62.6772 [500465/798480]
+.
+IoU@0.5: Average: 0.567 | TPR: 0.7116 [14205/19962]
+
+Epoch: 71/100
+
+Train Loss: 0.784 | 0.000 | 0.784
+
+Attribute Acc: 87.7839 [6413037/7305480] | GT Loc: 70.0417 [127922/182637] | Attr Loc: 61.5854 [4499112/7305480]
+.
+IoU@0.5: Average: 0.567 | TPR: 0.7004 [127922/182637]
+
+Validation Loss: 0.816 | 0.000 | 0.816
+
+Attribute Acc: 87.8960 [701832/798480] | GT Loc: 69.9579 [13965/19962] | Attr Loc: 61.6674 [492402/798480]
+.
+IoU@0.5: Average: 0.561 | TPR: 0.6996 [13965/19962]
+
+Epoch: 72/100
+
+Train Loss: 0.791 | 0.000 | 0.791
+
+Attribute Acc: 87.7778 [6412591/7305480] | GT Loc: 70.3932 [128564/182637] | Attr Loc: 61.8874 [4521169/7305480]
+.
+IoU@0.5: Average: 0.568 | TPR: 0.7039 [128564/182637]
+
+Validation Loss: 0.834 | 0.000 | 0.834
+
+Attribute Acc: 87.8705 [701628/798480] | GT Loc: 71.5459 [14282/19962] | Attr Loc: 63.0115 [503134/798480]
+.
+IoU@0.5: Average: 0.573 | TPR: 0.7155 [14282/19962]
+
+Epoch: 73/100
+
+Train Loss: 0.778 | 0.000 | 0.778
+
+Attribute Acc: 87.8069 [6414718/7305480] | GT Loc: 69.8446 [127562/182637] | Attr Loc: 61.4271 [4487548/7305480]
+.
+IoU@0.5: Average: 0.567 | TPR: 0.6984 [127562/182637]
+
+Validation Loss: 0.794 | 0.000 | 0.794
+
+Attribute Acc: 87.8151 [701186/798480] | GT Loc: 69.7074 [13915/19962] | Attr Loc: 61.3884 [490174/798480]
+.
+IoU@0.5: Average: 0.566 | TPR: 0.6971 [13915/19962]
+
+Epoch: 74/100
+
+Train Loss: 0.754 | 0.000 | 0.754
+
+Attribute Acc: 87.8422 [6417293/7305480] | GT Loc: 67.9643 [124128/182637] | Attr Loc: 59.7999 [4368667/7305480]
+.
+IoU@0.5: Average: 0.552 | TPR: 0.6796 [124128/182637]
+
+Validation Loss: 0.814 | 0.000 | 0.814
+
+Attribute Acc: 87.8627 [701566/798480] | GT Loc: 70.2986 [14033/19962] | Attr Loc: 61.9344 [494534/798480]
+.
+IoU@0.5: Average: 0.565 | TPR: 0.7030 [14033/19962]
+
+Epoch: 75/100
+
+Train Loss: 0.785 | 0.000 | 0.785
+
+Attribute Acc: 87.8136 [6415203/7305480] | GT Loc: 68.8513 [125748/182637] | Attr Loc: 60.5626 [4424385/7305480]
+.
+IoU@0.5: Average: 0.554 | TPR: 0.6885 [125748/182637]
+
+Validation Loss: 0.780 | 0.000 | 0.780
+
+Attribute Acc: 87.9451 [702224/798480] | GT Loc: 67.0774 [13390/19962] | Attr Loc: 59.1555 [472345/798480]
+.
+IoU@0.5: Average: 0.543 | TPR: 0.6708 [13390/19962]
+
+Epoch: 76/100
+
+Train Loss: 0.769 | 0.000 | 0.769
+
+Attribute Acc: 87.8274 [6416210/7305480] | GT Loc: 68.8875 [125814/182637] | Attr Loc: 60.6126 [4428041/7305480]
+.
+IoU@0.5: Average: 0.558 | TPR: 0.6889 [125814/182637]
+
+Validation Loss: 0.905 | 0.000 | 0.905
+
+Attribute Acc: 87.8465 [701437/798480] | GT Loc: 73.0037 [14573/19962] | Attr Loc: 64.2964 [513394/798480]
+.
+IoU@0.5: Average: 0.580 | TPR: 0.7300 [14573/19962]
+
+Epoch: 77/100
+
+Train Loss: 0.770 | 0.000 | 0.770
+
+Attribute Acc: 87.8058 [6414637/7305480] | GT Loc: 69.9688 [127789/182637] | Attr Loc: 61.5351 [4495434/7305480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.6997 [127789/182637]
+
+Validation Loss: 0.826 | 0.000 | 0.826
+
+Attribute Acc: 87.8798 [701703/798480] | GT Loc: 71.1652 [14206/19962] | Attr Loc: 62.6991 [500640/798480]
+.
+IoU@0.5: Average: 0.568 | TPR: 0.7117 [14206/19962]
+
+Epoch: 78/100
+
+Train Loss: 0.760 | 0.000 | 0.760
+
+Attribute Acc: 87.8584 [6418477/7305480] | GT Loc: 67.8586 [123935/182637] | Attr Loc: 59.7210 [4362904/7305480]
+.
+IoU@0.5: Average: 0.549 | TPR: 0.6786 [123935/182637]
+
+Validation Loss: 0.892 | 0.000 | 0.892
+
+Attribute Acc: 87.8844 [701739/798480] | GT Loc: 69.8828 [13950/19962] | Attr Loc: 61.5974 [491843/798480]
+.
+IoU@0.5: Average: 0.551 | TPR: 0.6988 [13950/19962]
+
+Epoch: 79/100
+
+Train Loss: 0.776 | 0.000 | 0.776
+
+Attribute Acc: 87.8510 [6417937/7305480] | GT Loc: 68.7582 [125578/182637] | Attr Loc: 60.5123 [4420712/7305480]
+.
+IoU@0.5: Average: 0.553 | TPR: 0.6876 [125578/182637]
+
+Validation Loss: 0.818 | 0.000 | 0.818
+
+Attribute Acc: 87.8479 [701448/798480] | GT Loc: 70.5691 [14087/19962] | Attr Loc: 62.1796 [496492/798480]
+.
+IoU@0.5: Average: 0.565 | TPR: 0.7057 [14087/19962]
+
+Epoch: 80/100
+
+Train Loss: 0.785 | 0.000 | 0.785
+
+Attribute Acc: 87.8336 [6416663/7305480] | GT Loc: 69.2713 [126515/182637] | Attr Loc: 60.9449 [4452318/7305480]
+.
+IoU@0.5: Average: 0.555 | TPR: 0.6927 [126515/182637]
+
+Validation Loss: 0.820 | 0.000 | 0.820
+
+Attribute Acc: 87.8661 [701593/798480] | GT Loc: 70.8797 [14149/19962] | Attr Loc: 62.4489 [498642/798480]
+.
+IoU@0.5: Average: 0.566 | TPR: 0.7088 [14149/19962]
+
+Epoch: 81/100
+
+Train Loss: 0.766 | 0.000 | 0.766
+
+Attribute Acc: 87.8505 [6417900/7305480] | GT Loc: 69.3458 [126651/182637] | Attr Loc: 61.0143 [4457390/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.6935 [126651/182637]
+
+Validation Loss: 0.829 | 0.000 | 0.829
+
+Attribute Acc: 87.8686 [701613/798480] | GT Loc: 70.6492 [14103/19962] | Attr Loc: 62.2514 [497065/798480]
+.
+IoU@0.5: Average: 0.565 | TPR: 0.7065 [14103/19962]
+
+Epoch: 82/100
+
+Train Loss: 0.788 | 0.000 | 0.788
+
+Attribute Acc: 87.8296 [6416373/7305480] | GT Loc: 70.2174 [128243/182637] | Attr Loc: 61.7754 [4512990/7305480]
+.
+IoU@0.5: Average: 0.562 | TPR: 0.7022 [128243/182637]
+
+Validation Loss: 0.856 | 0.000 | 0.856
+
+Attribute Acc: 87.8648 [701583/798480] | GT Loc: 71.5509 [14283/19962] | Attr Loc: 63.0298 [503280/798480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.7155 [14283/19962]
+
+Epoch: 83/100
+
+Train Loss: 0.786 | 0.000 | 0.786
+
+Attribute Acc: 87.8354 [6416796/7305480] | GT Loc: 70.1594 [128137/182637] | Attr Loc: 61.7323 [4509842/7305480]
+.
+IoU@0.5: Average: 0.561 | TPR: 0.7016 [128137/182637]
+
+Validation Loss: 0.857 | 0.000 | 0.857
+
+Attribute Acc: 87.8700 [701624/798480] | GT Loc: 71.7213 [14317/19962] | Attr Loc: 63.2022 [504657/798480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.7172 [14317/19962]
+
+Epoch: 84/100
+
+Train Loss: 0.781 | 0.000 | 0.781
+
+Attribute Acc: 87.8246 [6416012/7305480] | GT Loc: 70.0241 [127890/182637] | Attr Loc: 61.5975 [4499992/7305480]
+.
+IoU@0.5: Average: 0.561 | TPR: 0.7002 [127890/182637]
+
+Validation Loss: 0.840 | 0.000 | 0.840
+
+Attribute Acc: 87.8738 [701655/798480] | GT Loc: 71.1452 [14202/19962] | Attr Loc: 62.6909 [500574/798480]
+.
+IoU@0.5: Average: 0.568 | TPR: 0.7115 [14202/19962]
+
+Epoch: 85/100
+
+Train Loss: 0.780 | 0.000 | 0.780
+
+Attribute Acc: 87.8495 [6417824/7305480] | GT Loc: 69.9502 [127755/182637] | Attr Loc: 61.5435 [4496048/7305480]
+.
+IoU@0.5: Average: 0.560 | TPR: 0.6995 [127755/182637]
+
+Validation Loss: 0.836 | 0.000 | 0.836
+
+Attribute Acc: 87.8879 [701767/798480] | GT Loc: 71.0750 [14188/19962] | Attr Loc: 62.6220 [500024/798480]
+.
+IoU@0.5: Average: 0.566 | TPR: 0.7108 [14188/19962]
+
+Epoch: 86/100
+
+Train Loss: 0.770 | 0.000 | 0.770
+
+Attribute Acc: 87.8631 [6418824/7305480] | GT Loc: 69.4399 [126823/182637] | Attr Loc: 61.1147 [4464720/7305480]
+.
+IoU@0.5: Average: 0.557 | TPR: 0.6944 [126823/182637]
+
+Validation Loss: 0.833 | 0.000 | 0.833
+
+Attribute Acc: 87.8703 [701627/798480] | GT Loc: 70.9648 [14166/19962] | Attr Loc: 62.5307 [499295/798480]
+.
+IoU@0.5: Average: 0.565 | TPR: 0.7096 [14166/19962]
+
+Epoch: 87/100
+
+
+Message from syslogd@cbric-gpu15 at May 19 00:45:10 ...
+ kernel:do_IRQ: 28.133 No irq handler for vector (irq -1)
+Train Loss: 0.788 | 0.000 | 0.788
+
+Attribute Acc: 87.8446 [6417468/7305480] | GT Loc: 69.9957 [127838/182637] | Attr Loc: 61.5927 [4499641/7305480]
+.
+IoU@0.5: Average: 0.560 | TPR: 0.7000 [127838/182637]
+
+Validation Loss: 0.850 | 0.000 | 0.850
+
+Attribute Acc: 87.8932 [701810/798480] | GT Loc: 71.7263 [14318/19962] | Attr Loc: 63.1996 [504636/798480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.7173 [14318/19962]
+
+Epoch: 88/100
+
+
+Message from syslogd@cbric-gpu15 at May 19 01:07:55 ...
+ kernel:do_IRQ: 32.187 No irq handler for vector (irq -1)
+Train Loss: 0.782 | 0.000 | 0.782
+
+Attribute Acc: 87.8382 [6417005/7305480] | GT Loc: 69.7805 [127445/182637] | Attr Loc: 61.4009 [4485633/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.6978 [127445/182637]
+
+Validation Loss: 0.842 | 0.000 | 0.842
+
+Attribute Acc: 87.8701 [701625/798480] | GT Loc: 71.1051 [14194/19962] | Attr Loc: 62.6574 [500307/798480]
+.
+IoU@0.5: Average: 0.565 | TPR: 0.7111 [14194/19962]
+
+Epoch: 89/100
+
+Train Loss: 0.781 | 0.000 | 0.781
+
+Attribute Acc: 87.8545 [6418191/7305480] | GT Loc: 69.6250 [127161/182637] | Attr Loc: 61.2721 [4476223/7305480]
+.
+IoU@0.5: Average: 0.558 | TPR: 0.6962 [127161/182637]
+
+Validation Loss: 0.828 | 0.000 | 0.828
+
+Attribute Acc: 87.8757 [701670/798480] | GT Loc: 70.8246 [14138/19962] | Attr Loc: 62.4021 [498268/798480]
+.
+IoU@0.5: Average: 0.564 | TPR: 0.7082 [14138/19962]
+
+Epoch: 90/100
+
+Train Loss: 0.793 | 0.000 | 0.793
+
+Attribute Acc: 87.8432 [6417370/7305480] | GT Loc: 69.9398 [127736/182637] | Attr Loc: 61.5305 [4495098/7305480]
+.
+IoU@0.5: Average: 0.558 | TPR: 0.6994 [127736/182637]
+
+Validation Loss: 0.841 | 0.000 | 0.841
+
+Attribute Acc: 87.8872 [701762/798480] | GT Loc: 70.8997 [14153/19962] | Attr Loc: 62.4860 [498938/798480]
+.
+IoU@0.5: Average: 0.564 | TPR: 0.7090 [14153/19962]
+
+Epoch: 91/100
+
+Train Loss: 0.791 | 0.000 | 0.791
+
+Attribute Acc: 87.8353 [6416793/7305480] | GT Loc: 70.0504 [127938/182637] | Attr Loc: 61.6337 [4502640/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.7005 [127938/182637]
+
+Validation Loss: 0.845 | 0.000 | 0.845
+
+Attribute Acc: 87.8791 [701697/798480] | GT Loc: 71.0099 [14175/19962] | Attr Loc: 62.5847 [499726/798480]
+.
+IoU@0.5: Average: 0.563 | TPR: 0.7101 [14175/19962]
+
+Epoch: 92/100
+
+Train Loss: 0.784 | 0.000 | 0.784
+
+Attribute Acc: 87.8466 [6417614/7305480] | GT Loc: 69.7761 [127437/182637] | Attr Loc: 61.3990 [4485494/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.6978 [127437/182637]
+
+Validation Loss: 0.846 | 0.000 | 0.846
+
+Attribute Acc: 87.8930 [701808/798480] | GT Loc: 71.1802 [14209/19962] | Attr Loc: 62.7321 [500903/798480]
+.
+IoU@0.5: Average: 0.566 | TPR: 0.7118 [14209/19962]
+
+Epoch: 93/100
+
+Train Loss: 0.782 | 0.000 | 0.782
+
+Attribute Acc: 87.8329 [6416614/7305480] | GT Loc: 69.9678 [127787/182637] | Attr Loc: 61.5600 [4497250/7305480]
+.
+IoU@0.5: Average: 0.561 | TPR: 0.6997 [127787/182637]
+
+Validation Loss: 0.853 | 0.000 | 0.853
+
+Attribute Acc: 87.8528 [701487/798480] | GT Loc: 71.4508 [14263/19962] | Attr Loc: 62.9620 [502739/798480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.7145 [14263/19962]
+
+Epoch: 94/100
+
+Train Loss: 0.787 | 0.000 | 0.787
+
+Attribute Acc: 87.8581 [6418456/7305480] | GT Loc: 69.8905 [127646/182637] | Attr Loc: 61.5094 [4493560/7305480]
+.
+IoU@0.5: Average: 0.560 | TPR: 0.6989 [127646/182637]
+
+Validation Loss: 0.870 | 0.000 | 0.870
+
+Attribute Acc: 87.8740 [701656/798480] | GT Loc: 71.9116 [14355/19962] | Attr Loc: 63.3584 [505904/798480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.7191 [14355/19962]
+
+Epoch: 95/100
+
+Train Loss: 0.792 | 0.000 | 0.792
+
+Attribute Acc: 87.8556 [6418276/7305480] | GT Loc: 70.1720 [128160/182637] | Attr Loc: 61.7474 [4510941/7305480]
+.
+IoU@0.5: Average: 0.561 | TPR: 0.7017 [128160/182637]
+
+Validation Loss: 0.846 | 0.000 | 0.846
+
+Attribute Acc: 87.8791 [701697/798480] | GT Loc: 71.1251 [14198/19962] | Attr Loc: 62.6803 [500490/798480]
+.
+IoU@0.5: Average: 0.566 | TPR: 0.7113 [14198/19962]
+
+Epoch: 96/100
+
+Train Loss: 0.780 | 0.000 | 0.780
+
+Attribute Acc: 87.8545 [6418195/7305480] | GT Loc: 69.7860 [127455/182637] | Attr Loc: 61.4116 [4486411/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.6979 [127455/182637]
+
+Validation Loss: 0.823 | 0.000 | 0.823
+
+Attribute Acc: 87.8966 [701837/798480] | GT Loc: 70.8145 [14136/19962] | Attr Loc: 62.4037 [498281/798480]
+.
+IoU@0.5: Average: 0.563 | TPR: 0.7081 [14136/19962]
+
+Epoch: 97/100
+
+Train Loss: 0.782 | 0.000 | 0.782
+
+Attribute Acc: 87.8518 [6417996/7305480] | GT Loc: 69.8905 [127646/182637] | Attr Loc: 61.5017 [4492991/7305480]
+.
+IoU@0.5: Average: 0.560 | TPR: 0.6989 [127646/182637]
+
+Validation Loss: 0.834 | 0.000 | 0.834
+
+Attribute Acc: 87.9028 [701886/798480] | GT Loc: 70.9749 [14168/19962] | Attr Loc: 62.5551 [499490/798480]
+.
+IoU@0.5: Average: 0.567 | TPR: 0.7097 [14168/19962]
+
+Epoch: 98/100
+
+Train Loss: 0.777 | 0.000 | 0.777
+
+Attribute Acc: 87.8359 [6416835/7305480] | GT Loc: 69.7175 [127330/182637] | Attr Loc: 61.3281 [4480312/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.6972 [127330/182637]
+
+Validation Loss: 0.815 | 0.000 | 0.815
+
+Attribute Acc: 87.8708 [701631/798480] | GT Loc: 70.3587 [14045/19962] | Attr Loc: 62.0092 [495131/798480]
+.
+IoU@0.5: Average: 0.566 | TPR: 0.7036 [14045/19962]
+
+Epoch: 99/100
+
+Train Loss: 0.777 | 0.000 | 0.777
+
+Attribute Acc: 87.8440 [6417428/7305480] | GT Loc: 69.7071 [127311/182637] | Attr Loc: 61.3350 [4480819/7305480]
+.
+IoU@0.5: Average: 0.561 | TPR: 0.6971 [127311/182637]
+
+Validation Loss: 0.842 | 0.000 | 0.842
+
+Attribute Acc: 87.8783 [701691/798480] | GT Loc: 71.2504 [14223/19962] | Attr Loc: 62.7982 [501431/798480]
+.
+IoU@0.5: Average: 0.569 | TPR: 0.7125 [14223/19962]
+
+Epoch: 100/100
+
+Train Loss: 0.774 | 0.000 | 0.774
+
+Attribute Acc: 87.8343 [6416715/7305480] | GT Loc: 69.6201 [127152/182637] | Attr Loc: 61.2485 [4474499/7305480]
+.
+IoU@0.5: Average: 0.559 | TPR: 0.6962 [127152/182637]
+
+Validation Loss: 0.804 | 0.000 | 0.804
+
+Attribute Acc: 87.8518 [701479/798480] | GT Loc: 69.9629 [13966/19962] | Attr Loc: 61.6560 [492311/798480]
+.
+IoU@0.5: Average: 0.562 | TPR: 0.6996 [13966/19962]
+
+(torch_1.9_torchvision_10.0) -bash-4.2$ 
+

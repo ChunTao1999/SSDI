@@ -65,3 +65,5 @@ Run `bash test_lstm_13_for_paper_using_avg_masks.sh` to use method3: mIoU with a
 
 ## Walkthrough of scripts
 ### Scripts for generating attacks
+### Scripts for loading data (dataloader scripts)
+### Scripts for loading pre-trained models

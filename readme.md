@@ -4,7 +4,13 @@ The Image Grammar project provides a new way to learn the visual semantics and s
 The aim of this readme file is to allow anyone to reproduce code results of the above project.
 
 ## Rebuttal
-The rebuttal folder is at `SSDI_rebuttal/`, model checkpoints [here](https://drive.google.com/drive/folders/1-2pD-6OPCCL-AzsxBTiGQ4_5if_4C4OA?usp=sharing).   
+The rebuttal folder is at `SSDI_rebuttal/`, model checkpoints [here](https://drive.google.com/drive/folders/1-2pD-6OPCCL-AzsxBTiGQ4_5if_4C4OA?usp=sharing).
+To run the rebuttal notebook file `SSDI_rebuttal/train_lstm_sunrgbd.ipynb`, please
+```bash
+git clone https://github.com/IDEA-Research/Grounded-SAM-2.git
+```
+under the `SSDI_rebuttal` folder.  
+
 Another rebuttal file is at `cvpr24_image_semantics/foveation_grammar_detection_celebA/rebuttal.py`
 
 ## Organization of folders

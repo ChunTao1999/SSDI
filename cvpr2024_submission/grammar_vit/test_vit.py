@@ -67,6 +67,7 @@ test_data = Stanford_Dogs(root=root_path,
 test_loader = torch.utils.data.DataLoader(test_data, 
                                           batch_size=128, 
                                           shuffle=False)
+# import and build your corrupted dataloader here
 
 model = ViTForImageClassification.from_pretrained('google/vit-base-patch16-224')
 model.to(device)

@@ -3,15 +3,9 @@ The Image Grammar project provides a new way to learn the visual semantics and s
 
 The aim of this readme file is to allow anyone to reproduce code results of the above project.
 
-## Permission of files
-The author of this readme file has set 777 (read, write, execute) permission to all files in the `cvpr24_image_semantics` and `cvpr2024_submission` folders. 
-```bash
-chmod -R 777 cvpr24_image_semantics
-chmod -R 777 cvpr2024_submission
-```
-
 ## Rebuttal
-The rebuttal file is at `cvpr24_image_semantics/foveation_grammar_detection_celebA/rebuttal.py`
+The rebuttal folder is at `SSDI_rebuttal/`, model checkpoints [here](https://drive.google.com/drive/folders/1-2pD-6OPCCL-AzsxBTiGQ4_5if_4C4OA?usp=sharing).   
+Another rebuttal file is at `cvpr24_image_semantics/foveation_grammar_detection_celebA/rebuttal.py`
 
 ## Organization of folders
 The folders needed to run everything of the Image Grammar project are `cvpr2024_submission` and `cvpr24_image_semantics`. 

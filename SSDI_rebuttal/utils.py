@@ -61,3 +61,103 @@ def unfold(X, patch_size):
     patches = torch.permute(patches, (0, 2, 1))
     patches = torch.reshape(patches, (bs, num_patches, num_ch, patch_size, patch_size))
     return patches
+
+
+#%% Corruption methods during test
+# Shuffling with set num_distortion
+def corrupt_img_landmark_shuffle(tensors, num_distortion, patch_size):
+    result = []
+    for it, X in enumerate(tensors):
+        if len(X.shape) == 3:
+            X = X[None,...]
+        elif len(X.shape) == 2:
+            X = X[None,None,...]
+        patches = nnF.unfold(X, kernel_size=patch_size, stride=patch_size, padding=0) # only 4D inputs supported
+        # permute the patches (according to num_distortion)
+        num_patches = patches.shape[-1]
+        # pdb.set_trace()
+        if it == 0: # make sure img and depth/mask get same distortions
+            chosen_indices = random.sample(range(num_patches), num_distortion) # sample without replacement, fix it for all inputs
+            orig_order = torch.LongTensor(range(num_patches))
+            permuted_order = torch.LongTensor(range(num_patches))
+            for action in range(num_distortion):
+                permuted_order[chosen_indices[action]] = orig_order[chosen_indices[(action+1)%num_distortion]]
+        # concat the patches
+        patches_concatted = torch.cat([b_[:, permuted_order][None,...] for b_ in patches], dim=0)
+        # fold back
+        X = nnF.fold(patches_concatted, X.shape[-2:], kernel_size=patch_size, stride=patch_size, padding=0)
+        X = X.squeeze()
+        result.append(X)
+    return result
+
+
+# Random permute with set num_permute copies
+def corrupt_img_permute(tensors, num_permute, patch_size):
+    result = []
+    for it, X in enumerate(tensors):
+        if len(X.shape) == 3:
+            X = X[None,...]
+        elif len(X.shape) == 2:
+            X = X[None,None,...]
+        patches = nnF.unfold(X, kernel_size=patch_size, stride=patch_size, padding=0) # only 4D inputs supported
+        # permute the patches
+        num_patches = patches.shape[-1]
+        if it == 0:
+            permuted_orders = []
+            for perm_id in range(num_permute):
+                permuted_order = torch.randperm(num_patches)
+                permuted_orders.append(permuted_order)
+        # concat the different perms
+        res_tensor = X.clone()[None,...] # the correct version, (1, 3, 256, 256)
+        for perm_id, order in enumerate(permuted_orders):
+            patches_concatted = torch.cat([b_[:, order][None,...] for b_ in patches], dim=0)
+            # fold back
+            new_X = nnF.fold(patches_concatted, X.shape[-2:], kernel_size=patch_size, stride=patch_size, padding=0)
+            # concat to res_tensor
+            res_tensor = torch.cat((res_tensor, new_X[None,...]), dim=0)
+        result.append(res_tensor.squeeze())
+    return result
+
+
+def corrupt_img_black_box(tensors, num_box, patch_size):
+    result = []
+    for it, X in enumerate(tensors):
+        if len(X.shape) == 3:
+            X = X[None,...]
+        elif len(X.shape) == 2:
+            X = X[None,None,...]
+        # break the image and shadow tensors into patches according to ps
+        patches = nnF.unfold(X, kernel_size=patch_size, stride=patch_size, padding=0) # only 4D inputs supported
+        # make one or more patches into black box(es) according to num_box
+        num_patches = patches.shape[-1]
+        if it == 0: # fix the indices of corrupted patches for both rgb image and depth
+            chosen_indices = random.sample(range(num_patches), num_box)
+        for i, b_ in enumerate(patches):
+            patches[i][:, chosen_indices] = 0
+        # fold back, no need to permute the order
+        res_tensor = nnF.fold(patches, X.shape[-2:], kernel_size=patch_size, stride=patch_size, padding=0)
+        result.append(res_tensor.squeeze())
+    return result
+
+
+def corrupt_img_gaussian_blurring(tensors, num_box, patch_size, kernel_size=(11, 11), sigma=3):
+    result = []
+    blurrer = transforms.GaussianBlur(kernel_size=kernel_size, sigma=sigma)
+    for it, X in enumerate(tensors):
+        if len(X.shape) == 3:
+            X = X[None,...]
+        elif len(X.shape) == 2:
+            X = X[None,None,...]
+        # break the image and shadow tensors into patches according to ps
+        patches = nnF.unfold(X, kernel_size=patch_size, stride=patch_size, padding=0) # only 4D inputs supported
+        # make one or more patches into black box(es) according to num_box
+        num_patches = patches.shape[-1]
+        if it == 0: # fix the indices of corrupted patches for both rgb image and depth
+            chosen_indices = random.sample(range(num_patches), num_box)
+        for i, b_ in enumerate(patches):
+            for index in chosen_indices:
+                patches[i][:, index] = blurrer(patches[i][:, index].reshape(X.shape[1], patch_size, patch_size)).flatten()
+        # fold back, no need to permute the order
+        res_tensor = nnF.fold(patches, X.shape[-2:], kernel_size=patch_size, stride=patch_size, padding=0)
+        result.append(res_tensor.squeeze())
+    return result

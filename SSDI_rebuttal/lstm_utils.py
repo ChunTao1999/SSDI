@@ -81,11 +81,11 @@ def get_linear(indim, outdim):
 class LSTM_config(object):
     # Train and test configs
     epochs                  = 40
-    patch_size              = 80 # 160 or 80 when input image is 640x480
+    patch_size              = 160 # 160 or 80 when input image is 640x480
     # 4.26.2023 - tao88: corruption configs
-    all_corrupt             = True # only when doing "puzzle solving"
-    corruption_type         = "puzzle_solving" # choose among ["patch_shuffling", "puzzle_solving", "black_box", "gaussian_blurring"]
-    num_distortion          = 16 # number of patches that will be permuted, used in "patch_shuffling"
+    all_corrupt             = False # only when doing "puzzle solving"
+    corruption_type         = "patch_shuffling" # choose among ["patch_shuffling", "puzzle_solving", "black_box", "gaussian_blurring"]
+    num_distortion          = 4 # number of patches that will be permuted, used in "patch_shuffling"
     num_permute             = 3 # number of different permutations that will be created and compared against grouth truth, used in "puzzle_solving". Each permutation is a shuffling of all patches
     num_box                 = 4 # number of patches that will be made black boxes or blurred boxes, used in "black_box" and "gaussian_blurring"
 
@@ -116,6 +116,6 @@ class LSTM_config(object):
 
     # Pretrained
     # from_pretrained = True # False when train, True when test
-    ckpt_dir_model_M4 = "/content/drive/MyDrive/LSTM_models_trained_on_grounded_sam2_generated_labels/num_classes={}/input_size=640x480/ps={}_bi-lstm_numlayers=1_startlr=0.0001_epoch=40/checkpoint_40.pth.tar".format(semantics_dim, patch_size)
+    ckpt_dir_model_M4 = "/content/drive/MyDrive/LSTM_models_trained_on_sam2_generated_labels/num_classes={}/input_size=640x480/ps={}_bi-lstm_numlayers=1_startlr=0.0001_epoch=40/checkpoint_40.pth.tar".format(semantics_dim, patch_size)
 
 

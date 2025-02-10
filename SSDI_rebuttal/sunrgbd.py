@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import random
+import torch
 from torch.utils.data import Dataset
 import torchvision
 from torchvision import transforms
@@ -44,6 +45,7 @@ class SUNRGBD(Dataset):
             print(f"Warning: Could not open or process {img_path}. Skipping this image.")
             return True  # Assume the image is all zero in case of an error
 
+
 class scaleNorm:
     def __init__(self, height, width):
         self.height = height
@@ -55,3 +57,5 @@ class scaleNorm:
 class ToTensor:
     def __call__(self, img):
         return transforms.functional.to_tensor(img)
+
+

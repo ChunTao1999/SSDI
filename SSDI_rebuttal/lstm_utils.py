@@ -81,13 +81,13 @@ def get_linear(indim, outdim):
 class LSTM_config(object):
     # Train and test configs
     epochs                  = 40
-    patch_size              = 160 # 160 or 80 when input image is 640x480
+    patch_size              = 80 # 160 or 80 when input image is 640x480
     # 4.26.2023 - tao88: corruption configs
     all_corrupt             = False # only when doing "puzzle solving"
-    corruption_type         = "patch_shuffling" # choose among ["patch_shuffling", "puzzle_solving", "black_box", "gaussian_blurring"]
+    corruption_type         = "black_box" # choose among ["patch_shuffling", "puzzle_solving", "black_box", "gaussian_blurring"]
     num_distortion          = 4 # number of patches that will be permuted, used in "patch_shuffling"
     num_permute             = 3 # number of different permutations that will be created and compared against grouth truth, used in "puzzle_solving". Each permutation is a shuffling of all patches
-    num_box                 = 4 # number of patches that will be made black boxes or blurred boxes, used in "black_box" and "gaussian_blurring"
+    num_box                 = 16 # number of patches that will be made black boxes or blurred boxes, used in "black_box" and "gaussian_blurring"
 
     # LSTM architecture configs
     mask_dim = patch_size*patch_size

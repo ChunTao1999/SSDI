@@ -40,9 +40,9 @@ Please find the results below or at `SSDI/SSDI_rebuttal/inference_results.xlsx`
 
 
 ### Past rebuttal
-Another rebuttal file is at `cvpr24_image_semantics/foveation_grammar_detection_celebA/rebuttal.py`
+Another rebuttal file is at `cvpr24_image_semantics/foveation_grammar_detection_celebA/rebuttal.py`  
 
-
+The t-SNE visualizations are at `cvpr24_image_semantics/rebuttal_results` folder.  
 
 ## Organization of folders
 The folders needed to run everything of the Image Grammar project are `cvpr2024_submission` and `cvpr24_image_semantics`. 

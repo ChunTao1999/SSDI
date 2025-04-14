@@ -10,10 +10,10 @@ With this repository, you can:
 
 ## Setup
 Set-ups for this project involve the preparing datasets and downloading the pretrained model weights
+
+## Running SSDI Detection
 ### Stage One: Learning Part Semantics
 ### Stage Two: Learning Part Syntax
-
-### SSDI Detection
 #### SSDI Attack Generation
 To generate SSDI attacks for images in:
 - CelebA dataset:   
@@ -58,15 +58,14 @@ To generate SSDI attacks for images in:
 #### SSDI Detection Inference
 Below are the instructions to run SSDI inference based on the pretrained semantic segmentation models and bi-LSTM models, you would need to refer to `CelebA_syntax` and `SUNRGBD_syntax` folders.
 
-- CelebA
+- CelebA  
   There are 3 methods to run image grammar inference on CelebA images, as described in the [Towards Image Semantics and Syntax Sequence Learning](https://arxiv.org/pdf/2401.17515) paper, Figure 4.
 
   Navigate to the `CelebA_syntax` folder:
   ```bash
   cd CelebA_syntax
   ```
-
-  There are by default 7 part semantics in CelebA images, the number of hyperclusters is 20.
+  There are by default 7 part semantics in CelebA images, the number of hyperclusters is set to 20.
 
   To set configuration for your one-time inference, navigate to `CelebA_syntax/config/config_test_LSTM.py` and change the dataset corruption configs, to apply the desired corruption to the CelebA images. Choices are: `['landmark_shuffle', 'black_box', 'gaussian_blur', 'puzzle_solving']`. You can also determine the degree of corruption.
 
@@ -75,8 +74,12 @@ Below are the instructions to run SSDI inference based on the pretrained semanti
   Run `bash scripts/test_lstm_for_paper_using_avg_masks.sh` to use method3: mIoU with avg. semantics
 
 
-- SUN-RGBD
-  There are by default 13 part semantics in SUN-RGBD images, the number of hyperclusters is 37.
+- SUN-RGBD  
+  Navigate to the `CelebA_syntax` folder:
+  ```bash
+  cd SUNRGBD_syntax
+  ```
+  There are by default 13 part semantics in SUN-RGBD images, the number of hyperclusters is set to 37.
 
   To set configuration for your one-time inference, navigate to the `SUNRGBD_syntax/config_lstm.py` file and change the dataset corruption configs, to apply the desired corruption to the CelebA images. Choices are: `['landmark_shuffle', 'black_box', 'gaussian_blur', 'puzzle_solving']`. You can also determine the degree of corruption.
 
@@ -86,7 +89,9 @@ Below are the instructions to run SSDI inference based on the pretrained semanti
 
 
 ## Acknowledgments
-This project utilizes the [PiCIE](https://github.com/janghyuncho/PiCIE) framework for unsupervised image semantic representation learning. If you use PiCIE in your work, please consider citing their paper.
+This project utilizes the [PiCIE](https://github.com/janghyuncho/PiCIE) framework for unsupervised image semantic representation learning.  
+We referred to the code in [RedNet](https://github.com/JindongJiang/RedNet) for the semantic segmentation model traning and inference on SUNRGBD dataset.  
+Thanks to the authors of above repositories for their work.
 
 ## Citation
 If you find SSDI useful in your research, please consider citing:

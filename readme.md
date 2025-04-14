@@ -56,7 +56,33 @@ To generate SSDI attacks for images in:
   These variables are used when creating attacked CelebA dataset defined in `CelebA_inthewild` class in `CelebA_syntax/dataloader_celebA_inthewild.py`.
 
 #### SSDI Detection Inference
-To run inference for SSDI detection, navigate to 
+Below are the instructions to run SSDI inference based on the pretrained semantic segmentation models and bi-LSTM models, you would need to refer to `CelebA_syntax` and `SUNRGBD_syntax` folders.
+
+- CelebA
+  There are 3 methods to run image grammar inference on CelebA images, as described in the [Towards Image Semantics and Syntax Sequence Learning](https://arxiv.org/pdf/2401.17515) paper, Figure 4.
+
+  Navigate to the `CelebA_syntax` folder:
+  ```bash
+  cd CelebA_syntax
+  ```
+
+  There are by default 7 part semantics in CelebA images, the number of hyperclusters is 20.
+
+  To set configuration for your one-time inference, navigate to `CelebA_syntax/config/config_test_LSTM.py` and change the dataset corruption configs, to apply the desired corruption to the CelebA images. Choices are: `['landmark_shuffle', 'black_box', 'gaussian_blur', 'puzzle_solving']`. You can also determine the degree of corruption.
+
+  Run `bash scripts/bash test_lstm_for_paper.sh` to use method1: Bi-LSTM + next semantics  
+  Run `bash scripts/test_lstm_for_paper_using_avg_semantics.sh` to use method2: Bi-LSTM + avg. semantics  
+  Run `bash scripts/test_lstm_for_paper_using_avg_masks.sh` to use method3: mIoU with avg. semantics
+
+
+- SUN-RGBD
+  There are by default 13 part semantics in SUN-RGBD images, the number of hyperclusters is 37.
+
+  To set configuration for your one-time inference, navigate to the `SUNRGBD_syntax/config_lstm.py` file and change the dataset corruption configs, to apply the desired corruption to the CelebA images. Choices are: `['landmark_shuffle', 'black_box', 'gaussian_blur', 'puzzle_solving']`. You can also determine the degree of corruption.
+
+  Run `bash test_lstm_13_for_paper.sh` to use method1: Bi-LSTM + next semantics  
+  Run `bash test_lstm_13_for_paper_using_avg_semantics.sh` to use method2: Bi-LSTM + avg. semantics  
+  Run `bash test_lstm_13_for_paper_using_avg_masks.sh` to use method3: mIoU with avg. semantics
 
 
 ## Acknowledgments

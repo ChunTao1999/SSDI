@@ -39,7 +39,7 @@ To generate SSDI attacks for images in:
 
   These variables are used when creating attacked CelebA dataset defined in `CelebA_inthewild` class in `CelebA_syntax/dataloader_celebA_inthewild.py`.
 
-- SUNRGBD dataset
+- SUNRGBD dataset:  
   Navigate to `SUNRGBD_syntax/configs/config_LSTM.py` and set the variables under "Dataset corruption configs".  
   For example, to apply the "puzzle_solving" corruption, with a degree of 3 permuted puzzles each containing all-permuted 80x80 patches, set the variables as follows:
   ```python

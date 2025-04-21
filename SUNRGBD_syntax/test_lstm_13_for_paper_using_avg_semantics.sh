@@ -1,6 +1,6 @@
 BATCH_SIZE_TEST=32
 NUM_WORKERS=8
-OUTPUT_DIR='./11.7/sun_13_patch_160/transition_demo'
+OUTPUT_DIR='./transition_demo'
 
 python -u test_lstm_13_for_paper_using_avg_semantics.py \
 --cuda \
@@ -8,5 +8,5 @@ python -u test_lstm_13_for_paper_using_avg_semantics.py \
 --output-dir ${OUTPUT_DIR} \
 -b ${BATCH_SIZE_TEST} \
 -j ${NUM_WORKERS} \
---rednet-ckpt ./pretrained/rednet_ckpt.pth
+--rednet-ckpt models_trained_on_masks/rednet_ckpt.pth
 

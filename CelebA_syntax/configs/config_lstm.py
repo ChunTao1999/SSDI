@@ -43,25 +43,8 @@ class AVS_config(object):
 
     # Training and Inference Checkpoint
     initialize_M4 = 'from_checkpoint'
-    # ckpt_dir_model_M4_base = './results_new/celeba/trained_on_trainval_split/train_M3/v7_extE/arch_vgg8_narrow_k2_initialized_from_checkpoint_normalization_None_loss_correct_imbalance_False_seed_26/deepclusterv2/pca_reduce/omit_full_glimpse/use_centroids/constant_update/clustering_first/delta_approach'
-    # ckpt_dir_model_M4 = ckpt_dir_model_M4_base + '/model_4_10_epoch_0.001_prototype_15.pth'
-    # # Multiple AE
-    # ckpt_dir_model_M4_1 = ckpt_dir_model_M4_base + '/model_4_1.pth'
-    # ckpt_dir_model_M4_2 = ckpt_dir_model_M4_base + '/model_4_2.pth'
-    # ckpt_dir_model_M4_3 = ckpt_dir_model_M4_base + '/model_4_3.pth'
-    # ckpt_dir_model_M4_4 = ckpt_dir_model_M4_base + '/model_4_4.pth'
-    # ckpt_dir_model_M4_5 = ckpt_dir_model_M4_base + '/model_4_5.pth'
-    # ckpt_dir_model_M4_6 = ckpt_dir_model_M4_base + '/model_4_6.pth'
-    # ckpt_dir_model_M4_7 = ckpt_dir_model_M4_base + '/model_4_7.pth'
-    # ckpt_dir_model_M4_8 = ckpt_dir_model_M4_base + '/model_4_8.pth'
-    # ckpt_dir_model_M4_9 = ckpt_dir_model_M4_base + '/model_4_9.pth'
-    # ckpt_dir_model_M4_10 = ckpt_dir_model_M4_base + '/model_4_10.pth'
-    # ckpt_dir_model_M4_11 = ckpt_dir_model_M4_base + '/model_4_11.pth'
-    # ckpt_dir_model_M4_12 = ckpt_dir_model_M4_base + '/model_4_12.pth'
-    # ckpt_dir_model_M4_13 = ckpt_dir_model_M4_base + '/model_4_13.pth'
-    # ckpt_dir_model_M4_14 = ckpt_dir_model_M4_base + '/model_4_14.pth'
-    # ckpt_dir_model_M4_15 = ckpt_dir_model_M4_base + '/model_4_15.pth'
-    ckpt_dir_model_M4 = '/home/nano01/a/tao88/cvpr24_image_semantics/foveation_grammar_detection/bi-lstm_models_crop_masks_and_semantics_lr=0.0001/mse_loss/checkpoint_40.pth.tar'
+    # ckpt_dir_model_M4 = '/home/nano01/a/tao88/cvpr24_image_semantics/foveation_grammar_detection/bi-lstm_models_crop_masks_and_semantics_lr=0.0001/mse_loss/checkpoint_40.pth.tar'
+    ckpt_dir_model_M4 = 'models_trained_on_cropeed_masks/celeba_bilstm_checkpoint_40.pth.tar'
     
     # Inference config
     save_dir_base           = './test_inference/g_approach/feature_based/bi_lstm_approach_1_concat_output_projection/double_contrastive_loss'

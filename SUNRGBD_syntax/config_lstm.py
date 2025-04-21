@@ -40,4 +40,4 @@ class LSTM_config(object):
 
     # Pretrained
     # from_pretrained = True # False when train, True when test
-    ckpt_dir_model_M4 = "/home/nano01/a/tao88/cvpr24_image_semantics/RedNet/LSTM_models_trained_on_RedNet_generated_labels/num_classes={}/input_size=640x480/ps={}_bi-lstm_numlayers=1_startlr=0.0001_epoch=40/checkpoint_40.pth.tar".format(semantics_dim, patch_size)
+    ckpt_dir_model_M4 = "models_trained_on_masks/sunrgbd_bilstm_input_size=640x480_num_classes={}_ps={}_numlayers=1_startlr=0.0001_checkpoint_40.pth.tar".format(semantics_dim, patch_size)

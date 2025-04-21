@@ -1,3 +1,5 @@
+#!/bin/bash
+
 in_dim=128
 K_train=7
 K_test=7
@@ -12,6 +14,7 @@ LR=1e-4
 
 # flag unbuffer for pdb purpose
 # CUDA_VISIBLE_DEVICES=1
+# --eval_path /home/nano01/a/tao88/cvpr24_image_semantics/foveation_grammar_detection/crop_mask_models/checkpoint_20.pth.tar \
 
 python -u test_lstm_for_paper_using_avg_masks.py \
 --num_epoch ${num_epoch} \
@@ -20,6 +23,6 @@ python -u test_lstm_for_paper_using_avg_masks.py \
 --in_dim ${in_dim} \
 --K_train ${K_train} \
 --eval_only \
---eval_path /home/nano01/a/tao88/cvpr24_image_semantics/foveation_grammar_detection/crop_mask_models/checkpoint_20.pth.tar \
+--eval_path models_trained_on_cropeed_masks/celeba_resnet18+FPN_checkpoint_20.pth.tar \
 --lr ${LR} \
 --seed ${SEED} \

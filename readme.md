@@ -154,14 +154,11 @@ Thanks to the authors of above repositories for their work.
 ## Citation
 If you find SSDI useful in your research, please consider citing:
 ```
-@article{
-    anonymous2024semanticsyntactic,
-    title={Semantic-Syntactic Discrepancy in Images ({SSDI}): Learning Meaning and Order of Features from Natural Images},
-    author={Anonymous},
-    journal={Submitted to Transactions on Machine Learning Research},
-    year={2024},
-    url={https://openreview.net/forum?id=8otbGorZK2},
-    note={Under review}
+@article{tao2024towards,
+  title={Towards Image Semantics and Syntax Sequence Learning},
+  author={Tao, Chun and Ibrayev, Timur and Roy, Kaushik},
+  journal={arXiv preprint arXiv:2401.17515},
+  year={2024}
 }
 ```
 Or the [preprint version](https://arxiv.org/abs/2401.17515).

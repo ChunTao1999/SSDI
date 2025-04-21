@@ -44,9 +44,9 @@ Note: The model path is defined and loaded as `--rednet-ckpt models_trained_on_m
 Note: The model path is defined and loaded as `ckpt_dir_model_M4 = "models_trained_on_masks/sunrgbd_bilstm_input_size=640x480_num_classes={}_ps={}_numlayers=1_startlr=0.0001_checkpoint_40.pth.tar".format(semantics_dim, patch_size)` in `SUNRGBD_syntax/config_lstm.py`.
 
 ## Running SSDI Detection
-The composition of subfolders in `SSDI_cleaned` is as follows:
+The composition of subfolders in `SSDI` is as follows:
 ```
-- SSDI_cleaned
+- SSDI
   - CelebA_syntax
   - PiCIE-CelebA
   - SSDI_rebuttal
